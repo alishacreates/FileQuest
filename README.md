@@ -12,8 +12,6 @@ Explore your folders as places. Remember your files as objects.
 ![Three.js](https://img.shields.io/badge/Three.js-20232a?style=flat-square&logo=threedotjs&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-20232a?style=flat-square&logo=tailwindcss&logoColor=06B6D4)
 
-[Concept](#the-concept) · [User Journey](#user-journey) · [Technology](#proposed-technology-stack) · [Documentation](#documentation)
-
 </div>
 
 ---
@@ -112,8 +110,6 @@ Our first milestone was preparing the handwritten design and documenting the use
 ---
 
 <div align="center">
-
-An **Object-Oriented Analysis and Design** project.
 
 **FileQuest — Never forget where you saved a file.**
 
