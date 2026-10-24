@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net" agent="FileQuest">
+  <diagram id="filequest-deployment" name="Deployment Diagram">
+    <mxGraphModel dx="1365" dy="955" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="1080" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;text;align=left;fontSize=32;fontStyle=1;" value="FileQuest - Deployment Diagram" vertex="1">
+          <mxGeometry height="55" width="1200" x="60" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="computer" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;shape=cube;size=20;fillColor=#F8FAFC;strokeColor=#94A3B8;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=34;spacingTop=27;fontSize=18;container=1;collapsible=0;" value="&amp;lt;&amp;lt;device&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;User’s Computer&lt;/b&gt;" vertex="1">
+          <mxGeometry height="710" width="1280" x="60" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="browser" parent="computer" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;shape=cube;size=15;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=25;spacingTop=25;fontSize=17;container=1;collapsible=0;" value="&amp;lt;&amp;lt;executionEnvironment&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Web Browser&lt;/b&gt;" vertex="1">
+          <mxGeometry height="240" width="480" x="60" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend" parent="browser" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;shape=note;size=16;fillColor=#FFFFFF;strokeColor=#93C5FD;strokeWidth=1.5;align=left;spacingLeft=17;spacingRight=12;fontSize=14;" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;FileQuest Frontend&lt;/b&gt;&lt;br&gt;&lt;br&gt;React · React Three Fiber · Three.js&lt;br&gt;Dashboard, directory, thumbnails and 3D views" vertex="1">
+          <mxGeometry height="110" width="420" x="25" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="runtime" parent="computer" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;shape=cube;size=15;fillColor=#F5F3FF;strokeColor=#8B5CF6;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=25;spacingTop=25;fontSize=17;container=1;collapsible=0;" value="&amp;lt;&amp;lt;executionEnvironment&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Local Backend Runtime {TBD}&lt;/b&gt;" vertex="1">
+          <mxGeometry height="240" width="480" x="730" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="backend" parent="runtime" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;shape=note;size=16;fillColor=#FFFFFF;strokeColor=#C4B5FD;strokeWidth=1.5;align=left;spacingLeft=17;fontSize=14;" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;FileQuest Backend&lt;/b&gt;&lt;br&gt;&lt;br&gt;Local API · File mappings · Native actions" vertex="1">
+          <mxGeometry height="110" width="420" x="25" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="os-note" parent="computer" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;shape=note;size=15;fillColor=#FFFBEB;strokeColor=#D4AC45;align=left;spacingLeft=17;fontSize=14;" value="&lt;b&gt;Native file actions&lt;/b&gt;&lt;br&gt;Backend requests operating-system services:&lt;br&gt;Open · Open With · Reveal in Finder / file explorer" vertex="1">
+          <mxGeometry height="95" width="480" x="60" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="files" parent="computer" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;shape=note;size=18;fillColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.5;align=left;spacingLeft=20;fontSize=14;" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;User Files and Folders&lt;/b&gt;&lt;br&gt;&lt;br&gt;Original PDFs, images and documents&lt;br&gt;Stored in their real local locations" vertex="1">
+          <mxGeometry height="125" width="370" x="220" y="545" as="geometry" />
+        </mxCell>
+        <mxCell id="database" parent="computer" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;shape=note;size=18;fillColor=#F0FDFA;strokeColor=#14B8A6;strokeWidth=1.5;align=left;spacingLeft=20;fontSize=14;" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;FileQuest Local Database {engine TBD}&lt;/b&gt;&lt;br&gt;&lt;br&gt;Paths · Hierarchy · Template associations&lt;br&gt;Virtual object mappings · Spatial positions" vertex="1">
+          <mxGeometry height="125" width="420" x="755" y="545" as="geometry" />
+        </mxCell>
+        <mxCell id="localhost" edge="1" parent="computer" source="browser" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=2;fontSize=13;labelBackgroundColor=#FFFFFF;endArrow=none;startArrow=none;strokeColor=#526784;exitX=1;exitY=0.37;entryX=0;entryY=0.37;" target="runtime" value="HTTP / localhost">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="database-use" edge="1" parent="computer" source="backend" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=2;fontSize=13;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#0F766E;exitX=0.66;exitY=1;entryX=0.66;entryY=0;" target="database" value="«use»&lt;br&gt;Read / write metadata">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="files-use" edge="1" parent="computer" source="backend" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=2;fontSize=13;labelBackgroundColor=#FFFFFF;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=0.15;exitY=1;entryX=0.8;entryY=0;" target="files" value="«use» Access through OS file APIs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="818" y="510" />
+              <mxPoint x="516" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="note-link" edge="1" parent="computer" source="backend" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=2;fontSize=13;labelBackgroundColor=#FFFFFF;dashed=1;endArrow=none;strokeWidth=1;strokeColor=#D4AC45;exitX=0;exitY=0.75;entryX=1;entryY=0.5;" target="os-note" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="303" />
+              <mxPoint x="660" y="447" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-title" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;text;align=left;fontSize=12;fontStyle=1;fontColor=#526784;" value="HOW TO READ THIS DIAGRAM" vertex="1">
+          <mxGeometry height="22" width="440" x="550" y="932" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;text;align=left;fontSize=13;" value="&lt;b&gt;3D box&lt;/b&gt;  Device or execution environment&lt;br&gt;&lt;b&gt;Folded-corner box&lt;/b&gt;  Artifact; amber box is an explanatory note" vertex="1">
+          <mxGeometry height="55" width="305" x="312.5" y="954" as="geometry" />
+        </mxCell>
+        <mxCell id="legend2" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#172B4D;text;align=left;fontSize=13;" value="&lt;b&gt;Solid line&lt;/b&gt;  Communication path&lt;br&gt;&lt;b&gt;Dashed arrow&lt;/b&gt;  Usage dependency" vertex="1">
+          <mxGeometry height="55" width="240" x="740" y="954" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
