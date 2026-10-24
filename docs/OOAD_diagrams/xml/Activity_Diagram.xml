@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" pages="4">
+  <diagram name="1. External Change Reconciliation Workflow" id="cZyjbpn7LOqtOLG2Wepk">
+    <mxGraphModel dx="1633" dy="988" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#1E293B;" value="&lt;b&gt;UML Activity Diagram: External Change Reconciliation Workflow&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px; color: #64748B;&quot;&gt;Models OS FileSystemWatcher and periodic background reconciliation handling external file events&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="600" x="400" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_start" parent="1" style="ellipse;fillColor=#1E293B;strokeColor=#0F172A;shadow=0;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="685" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_capture" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Capture Filesystem Event&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;(OS FileSystemWatcher / Periodic Scan)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="200" x="600" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_debounce" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Debounce &amp;amp; Normalize Event&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Filter redundant notifications &amp;amp; parse paths&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="210" x="595" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_obj_event" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=middle;align=center;fillColor=#EEF2FF;strokeColor=#6366F1;strokeWidth=1.5;fontColor=#312E81;fontSize=11;" value="&amp;laquo;objectNode&amp;raquo;&lt;br&gt;&lt;b&gt;fsEvent: FileChangeEvent&lt;/b&gt;&lt;br&gt;[Normalized &amp;amp; Debounced]" vertex="1">
+          <mxGeometry height="70" width="160" x="840" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_dec_type" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontSize=11;" value="&lt;b&gt;Event&lt;br&gt;Type?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="120" x="640" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_inspect_file" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Inspect File Attributes&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Read size, MIME, hash &amp;amp; timestamps&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="190" x="160" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_insert_unplaced" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Register Unplaced File&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Insert record into SQLite files table&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="190" x="160" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_route_lostfound" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Route to &quot;Lost &amp;amp; Found&quot; Tray&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Populate in-game staging inbox UI badge&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="230" x="140" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_obj_staging" parent="1" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#ECFDF5;strokeColor=#10B981;strokeWidth=1.5;fontColor=#065F46;fontSize=11;align=center;" value="&amp;laquo;datastore&amp;raquo;&lt;br&gt;&lt;b&gt;Lost &amp;amp; Found Staging Tray&lt;/b&gt;&lt;br&gt;[Awaiting Spatial Placement]" vertex="1">
+          <mxGeometry height="65" width="180" x="165" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_query_id" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Match Stable File Identity&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Query OS fileID / inode / hash in SQLite&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="200" x="600" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_dec_match" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=d97706;strokeWidth=1.5;fontColor=#92400E;fontSize=11;" value="&lt;b&gt;Identity&lt;br&gt;Match Unique?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="130" x="635" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_flag_ambiguity" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=1.5;fontColor=#991B1B;fontSize=12;" value="&lt;b&gt;Flag Ambiguity Conflict&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Mark entity state &amp;amp; log warning&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="180" x="440" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_prompt_user" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Queue User Resolution Prompt&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Present manual remap dialogue&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="180" x="440" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_update_db" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Update Path &amp;amp; Identity in DB&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Execute atomic SQLite transaction&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="190" x="670" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_sync_visual" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Sync Spatial Label &amp;amp; Overlay&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Update 3D floating tag &amp;amp; path tooltip&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="190" x="670" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_check_placement" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Lookup Spatial Placement&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Query placements table for file_uuid&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="200" x="1060" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_dec_is_placed" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontSize=11;" value="&lt;b&gt;Active 3D&lt;br&gt;Placement?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="120" x="1100" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_make_ghost" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontSize=12;" value="&lt;b&gt;Convert to Ghost Object&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Apply translucent shader &amp;amp; broken anchor&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="230" x="940" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_set_orphaned" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Mark State = &quot;ORPHANED&quot;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Preserve spatial coords in SQLite&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="190" x="960" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_purge_record" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Purge Unplaced Metadata&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Delete unanchored entry from SQLite&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="190" x="1190" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_merge" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E2E8F0;strokeColor=#475569;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="40" width="50" x="675" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_act_sync_index" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Commit Transaction &amp;amp; Refresh Spatial Index&lt;/b&gt;" vertex="1">
+          <mxGeometry height="45" width="280" x="560" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_end" parent="1" style="ellipse;html=1;shape=endState;fillColor=#1E293B;strokeColor=#0F172A;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="685" y="935" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e1" edge="1" parent="1" source="d1_start" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_act_capture">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e2" edge="1" parent="1" source="d1_act_capture" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_act_debounce">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e_obj" edge="1" parent="1" source="d1_act_debounce" style="edgeStyle=orthogonalEdgeStyle;dashed=1;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6366F1;strokeWidth=1.5;" target="d1_obj_event">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e3" edge="1" parent="1" source="d1_act_debounce" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_dec_type">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e4" edge="1" parent="1" source="d1_dec_type" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#1E293B;fontSize=11;align=center;" target="d1_act_inspect_file" value="[Created]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="255" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d1_e5" edge="1" parent="1" source="d1_act_inspect_file" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_act_insert_unplaced">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e6" edge="1" parent="1" source="d1_act_insert_unplaced" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_act_route_lostfound">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e_lostfound" edge="1" parent="1" source="d1_act_route_lostfound" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_obj_staging">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e_route_merge" edge="1" parent="1" source="d1_obj_staging" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_merge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="255" y="810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d1_e7" edge="1" parent="1" source="d1_dec_type" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#1E293B;fontSize=11;align=center;" target="d1_act_query_id" value="[Renamed / Moved]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e8" edge="1" parent="1" source="d1_act_query_id" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_dec_match">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e_match_yes" edge="1" parent="1" source="d1_dec_match" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#1E293B;fontSize=11;align=center;" target="d1_act_update_db" value="[Unique match]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="765" y="535" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d1_e9" edge="1" parent="1" source="d1_act_update_db" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_act_sync_visual">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e_visual_merge" edge="1" parent="1" source="d1_act_sync_visual" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_merge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="765" y="770" />
+              <mxPoint x="700" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d1_e_match_no" edge="1" parent="1" source="d1_dec_match" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#1E293B;fontSize=11;align=center;" target="d1_act_flag_ambiguity" value="[Ambiguous / None]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="535" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d1_e10" edge="1" parent="1" source="d1_act_flag_ambiguity" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_act_prompt_user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e_prompt_merge" edge="1" parent="1" source="d1_act_prompt_user" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_merge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="770" />
+              <mxPoint x="700" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d1_e11" edge="1" parent="1" source="d1_dec_type" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#1E293B;fontSize=11;align=center;" target="d1_act_check_placement" value="[Deleted]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1160" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d1_e12" edge="1" parent="1" source="d1_act_check_placement" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_dec_is_placed">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e_placed_yes" edge="1" parent="1" source="d1_dec_is_placed" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#1E293B;fontSize=11;align=center;" target="d1_act_make_ghost" value="[Active placement]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1055" y="535" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d1_e13" edge="1" parent="1" source="d1_act_make_ghost" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_act_set_orphaned">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e_ghost_merge" edge="1" parent="1" source="d1_act_set_orphaned" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_merge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1055" y="770" />
+              <mxPoint x="700" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d1_e_placed_no" edge="1" parent="1" source="d1_dec_is_placed" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#1E293B;fontSize=11;align=center;" target="d1_act_purge_record" value="[Unplaced / In staging]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1285" y="535" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d1_e_purge_merge" edge="1" parent="1" source="d1_act_purge_record" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_merge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1285" y="810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d1_e14" edge="1" parent="1" source="d1_merge" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_act_sync_index">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d1_e15" edge="1" parent="1" source="d1_act_sync_index" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d1_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="2. Object Spatial Drag-and-Drop Placement" id="btKhg0JiMzAaJrF3n_N6">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1500" pageHeight="1300" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#1E293B;" value="&lt;b&gt;UML Activity Diagram: Object Spatial Drag-and-Drop Placement&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px; color: #64748B;&quot;&gt;Governs interactive raycasting, collision evaluation, snapping rules, spatial validation, DB commit, and 3D instantiation&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="700" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_start" parent="1" style="ellipse;fillColor=#1E293B;strokeColor=#0F172A;shadow=0;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="685" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_act_initiate" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Initiate Drag Operation&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Select file item from Lost &amp;amp; Found tray or existing anchor&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="230" x="585" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_act_cast_ray" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Cast Camera Viewport Ray&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;PhysicsDirectSpaceState3D.IntersectRay()&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="590" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_dec_collision" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontSize=11;" value="&lt;b&gt;Surface Hit&lt;br&gt;Detected?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="120" x="640" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_act_reticle" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FEF2F2;strokeColor=#F87171;strokeWidth=1.5;fontColor=#991B1B;fontSize=12;" value="&lt;b&gt;Project Free-Float Reticle&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Clamp to default camera focal plane (distance d)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="210" x="220" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_act_eval_normal" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Evaluate Surface Normal &amp;amp; Plane&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Classify orientation (Desk/Floor vs. Wall vs. Shelf)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="590" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_act_snap" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Apply Grid &amp;amp; Magnet Snapping&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Align coordinates to local bounding increments&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="590" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_act_preview" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;fontColor=#1E3A8A;fontSize=12;" value="&lt;b&gt;Render Placement Ghost Preview&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Real-time translucent shader at proposed coords&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="590" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_dec_drop" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontSize=11;" value="&lt;b&gt;Mouse/Key&lt;br&gt;Released?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="120" x="640" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_act_validate" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Validate Placement Constraints&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Check room boundary AABB &amp;amp; overlap exclusion&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="260" x="570" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_dec_valid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontSize=11;" value="&lt;b&gt;Position&lt;br&gt;Valid?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="110" x="645" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_act_revert" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=1.5;fontColor=#991B1B;fontSize=12;" value="&lt;b&gt;Revert Placement &amp;amp; Play Audio Cue&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Snap back to initial pose / return to Lost &amp;amp; Found&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="210" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_act_commit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Commit Placement to SQLite&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;UPSERT placements (file_uuid, room_id, pos, rot, scale)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="240" x="580" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_obj_db" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#EEF2FF;strokeColor=#6366F1;strokeWidth=1.5;fontColor=#312E81;fontSize=11;" value="&amp;laquo;datastore&amp;raquo;&lt;br&gt;&lt;b&gt;SQLite placements Table&lt;/b&gt;&lt;br&gt;[Committed Spatial Anchor]" vertex="1">
+          <mxGeometry height="80" width="170" x="870" y="905" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_act_instantiate" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Instantiate &amp;amp; Render 3D Mesh&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Attach collision shape, label &amp;amp; native media preview&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="230" x="585" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_act_emit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Emit SpatialPlacementChanged Signal&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Notify radar, undo history stack &amp;amp; spatial index&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="240" x="580" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_merge_term" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E2E8F0;strokeColor=#475569;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="40" width="50" x="675" y="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_end" parent="1" style="ellipse;html=1;shape=endState;fillColor=#1E293B;strokeColor=#0F172A;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="685" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e1" edge="1" parent="1" source="d2_start" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d2_act_initiate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e2" edge="1" parent="1" source="d2_act_initiate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d2_act_cast_ray">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e3" edge="1" parent="1" source="d2_act_cast_ray" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d2_dec_collision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e_hit_yes" edge="1" parent="1" source="d2_dec_collision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#1E293B;fontSize=11;align=center;" target="d2_act_eval_normal" value="[Hit valid surface]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e_hit_no" edge="1" parent="1" source="d2_dec_collision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#1E293B;fontSize=11;align=center;" target="d2_act_reticle" value="[Ray miss]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e_reticle_loop" edge="1" parent="1" source="d2_act_reticle" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d2_act_preview">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="325" y="585" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d2_e4" edge="1" parent="1" source="d2_act_eval_normal" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d2_act_snap">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e5" edge="1" parent="1" source="d2_act_snap" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d2_act_preview">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e6" edge="1" parent="1" source="d2_act_preview" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d2_dec_drop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e_keep_dragging" edge="1" parent="1" source="d2_dec_drop" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94A3B8;strokeWidth=1.5;fontColor=#64748B;fontSize=11;" target="d2_act_cast_ray" value="[Dragging continues]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="675" />
+              <mxPoint x="880" y="245" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d2_e_drop_yes" edge="1" parent="1" source="d2_dec_drop" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#1E293B;fontSize=11;align=center;" target="d2_act_validate" value="[Drop released]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e7" edge="1" parent="1" source="d2_act_validate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d2_dec_valid">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e_valid_no" edge="1" parent="1" source="d2_dec_valid" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#1E293B;fontSize=11;align=center;" target="d2_act_revert" value="[Overlap / Out of bounds]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e_revert_term" edge="1" parent="1" source="d2_act_revert" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d2_merge_term">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="1180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d2_e_valid_yes" edge="1" parent="1" source="d2_dec_valid" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#1E293B;fontSize=11;align=center;" target="d2_act_commit" value="[Valid pose]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e_db_link" edge="1" parent="1" source="d2_act_commit" style="edgeStyle=orthogonalEdgeStyle;dashed=1;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6366F1;strokeWidth=1.5;" target="d2_obj_db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e8" edge="1" parent="1" source="d2_act_commit" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d2_act_instantiate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e9" edge="1" parent="1" source="d2_act_instantiate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d2_act_emit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e10" edge="1" parent="1" source="d2_act_emit" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d2_merge_term">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d2_e11" edge="1" parent="1" source="d2_merge_term" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d2_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="3. Palace Initialization &amp; Vault Indexing" id="EdnKzcVxI1GYrxYvRF9c">
+    <mxGraphModel dx="1696" dy="1026" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1200" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#1E293B;" value="&lt;b&gt;UML Activity Diagram: Palace Initialization &amp;amp; Vault Indexing&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px; color: #64748B;&quot;&gt;Coordinates boot pipeline: vault resolution, SQLite migration, storage traversal, fork/join concurrent workflows, and player spawning&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="750" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_start" parent="1" style="ellipse;fillColor=#1E293B;strokeColor=#0F172A;shadow=0;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="685" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_resolve" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Resolve Vault Root Directory&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Read settings config or prompt directory picker&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="230" x="585" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_migrate" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Initialize &amp;amp; Migrate SQLite Schema&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Verify PRAGMA user_version &amp;amp; apply pending DDL&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="230" x="585" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_traverse" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Traverse Vault Filesystem Hierarchy&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Recursive directory iteration; collect stats &amp;amp; hashes&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="250" x="575" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_obj_manifest" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;verticalAlign=middle;align=center;fillColor=#EEF2FF;strokeColor=#6366F1;strokeWidth=1.5;fontColor=#312E81;fontSize=11;" value="&amp;laquo;objectNode&amp;raquo;&lt;br&gt;&lt;b&gt;fileManifest: List&amp;lt;FileEntry&amp;gt;&lt;/b&gt;&lt;br&gt;[Discovered Hierarchy]" vertex="1">
+          <mxGeometry height="70" width="170" x="870" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_start_watcher" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Start OS FileSystemWatcher Service&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Attach real-time event listeners on vault root&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="240" x="580" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_fork" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#0F172A;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="8" width="900" x="250" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_p1_load" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Stream Environment Assets&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Async load glTF/GLB room geometry&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="250" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_p1_colliders" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Bake Static Colliders &amp;amp; Lighting&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Build physics navigation mesh &amp;amp; probes&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="250" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_p1_instantiate" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Spawn Placed 3D Objects&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Instantiate saved placements in room&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="250" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_p2_diff" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Reconcile Index vs Vault&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Diff manifest against SQLite files table&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="590" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_p2_fts" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Build In-Memory Search Index&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Warm SQLite FTS5 table &amp;amp; tag index&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="590" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_p2_staging" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Populate Lost &amp;amp; Found Queue&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Queue unplaced files into inbox model&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="590" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_p3_check" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Audit Thumbnail Cache&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Check local hash against disk cache on .fq/cache&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="930" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_p3_generate" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Generate Missing Previews&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Off-thread render of text &amp;amp; image thumbnails&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="930" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_p3_warm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Prime Texture GPU Pool&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Preload active room materials &amp;amp; MIP maps&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="930" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_join" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E293B;strokeColor=#0F172A;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="8" width="900" x="250" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_spawn" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#ECFDF5;strokeColor=#10B981;strokeWidth=1.5;fontColor=#065F46;fontSize=12;" value="&lt;b&gt;Spawn Player Avatar into Primary Space&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Restore camera transform / default bookmark spawn point&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="270" x="565" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_act_enable_input" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Enable Player Input &amp;amp; Fade In UI HUD&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Activate movement controller, radar HUD &amp;amp; Ctrl+K listener&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="270" x="565" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_end" parent="1" style="ellipse;html=1;shape=endState;fillColor=#1E293B;strokeColor=#0F172A;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="685" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_e1" edge="1" parent="1" source="d3_start" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_resolve">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_e2" edge="1" parent="1" source="d3_act_resolve" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_migrate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_e3" edge="1" parent="1" source="d3_act_migrate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_traverse">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_e_manifest" edge="1" parent="1" source="d3_act_traverse" style="edgeStyle=orthogonalEdgeStyle;dashed=1;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6366F1;strokeWidth=1.5;" target="d3_obj_manifest">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_e4" edge="1" parent="1" source="d3_act_traverse" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_start_watcher">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_e5" edge="1" parent="1" source="d3_act_start_watcher" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_fork">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_e_fork_p1" edge="1" parent="1" source="d3_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_p1_load">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="510" />
+              <mxPoint x="360" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d3_e_fork_p2" edge="1" parent="1" source="d3_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_p2_diff">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="478" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d3_e_fork_p3" edge="1" parent="1" source="d3_fork" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_p3_check">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="500" />
+              <mxPoint x="1040" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d3_ep1_1" edge="1" parent="1" source="d3_act_p1_load" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_p1_colliders">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_ep1_2" edge="1" parent="1" source="d3_act_p1_colliders" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_p1_instantiate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_ep1_3" edge="1" parent="1" source="d3_act_p1_instantiate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_join">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d3_ep2_1" edge="1" parent="1" source="d3_act_p2_diff" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_p2_fts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_ep2_2" edge="1" parent="1" source="d3_act_p2_fts" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_p2_staging">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_ep2_3" edge="1" parent="1" source="d3_act_p2_staging" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_join">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d3_ep3_1" edge="1" parent="1" source="d3_act_p3_check" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_p3_generate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_ep3_2" edge="1" parent="1" source="d3_act_p3_generate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_p3_warm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_ep3_3" edge="1" parent="1" source="d3_act_p3_warm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_join">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d3_e_join" edge="1" parent="1" source="d3_join" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_spawn">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_e6" edge="1" parent="1" source="d3_act_spawn" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_act_enable_input">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d3_e7" edge="1" parent="1" source="d3_act_enable_input" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d3_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="4. File Deletion &amp; Recovery Workflow" id="5lDfcy0n9lppYXBRhoK6">
+    <mxGraphModel dx="1814" dy="1097" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1200" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#1E293B;" value="&lt;b&gt;UML Activity Diagram: File Deletion &amp;amp; Recovery Workflow&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px; color: #64748B;&quot;&gt;Manages deletion requests: confirmation gate, OS Recycle Bin dispatch, SQLite soft-delete, exit animation, and atomic rollback on failure&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="750" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_start" parent="1" style="ellipse;fillColor=#1E293B;strokeColor=#0F172A;shadow=0;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="685" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_act_request" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Request File Deletion&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Triggered via 3D context menu, hotkey, or multi-select&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="240" x="580" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_act_modal" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Display Deletion Confirmation Gate&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Show target path(s), count &amp;amp; destination: OS Trash&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="240" x="580" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_dec_confirm" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontSize=11;" value="&lt;b&gt;User Confirmed&lt;br&gt;Action?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="130" x="635" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_act_cancel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F1F5F9;strokeColor=#64748B;strokeWidth=1.5;fontColor=#334155;fontSize=12;" value="&lt;b&gt;Abort Deletion Operation&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Dismiss dialogue &amp;amp; retain 3D active state&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="190" x="380" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_end_cancel" parent="1" style="ellipse;html=1;shape=endState;fillColor=#64748B;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="290" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_act_snapshot" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Begin SQLite Transaction &amp;amp; Snapshot State&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Record previous spatial placement in recovery buffer&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="270" x="565" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_act_os_trash" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Invoke ITrashService (OS Native Trash)&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Move file to Recycle Bin (Win) / Trash (macOS / Linux)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="250" x="575" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_dec_os_result" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.5;fontColor=#92400E;fontSize=11;" value="&lt;b&gt;OS Trash&lt;br&gt;Succeeded?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="120" x="640" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_act_rollback" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=1.5;fontColor=#991B1B;fontSize=12;" value="&lt;b&gt;Rollback SQLite Transaction&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Revert changes; restore file placement record&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="200" x="280" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_act_alert_error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=1.5;fontColor=#991B1B;fontSize=12;" value="&lt;b&gt;Display Error Alert Dialogue&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Show OS error (Permission Denied, File Locked, etc.)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="200" x="280" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_act_restore_visual" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Restore 3D Visual Mesh State&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Reset node transform and remove loading indicators&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="200" x="280" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_act_soft_delete" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Update SQLite: Mark Deleted / Remove Anchor&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Set state = &#39;DELETED&#39; &amp;amp; record deletion timestamp&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="260" x="660" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_obj_db" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#EEF2FF;strokeColor=#6366F1;strokeWidth=1.5;fontColor=#312E81;fontSize=11;" value="&amp;laquo;datastore&amp;raquo;&lt;br&gt;&lt;b&gt;SQLite placements Table&lt;/b&gt;&lt;br&gt;[Soft-Deleted Record]" vertex="1">
+          <mxGeometry height="70" width="160" x="960" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_act_play_anim" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Play 3D Exit Dissolve Animation&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Particle poof / fade out &amp;amp; release scene node&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="240" x="670" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_act_undo_stack" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Push Action to Application Undo Stack&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: #475569;&quot;&gt;Store original location for Ctrl+Z recovery&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="240" x="670" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_merge" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E2E8F0;strokeColor=#475569;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="40" width="50" x="675" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_act_commit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" value="&lt;b&gt;Commit Transaction &amp;amp; Refresh Radar HUD&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="250" x="575" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_end" parent="1" style="ellipse;html=1;shape=endState;fillColor=#1E293B;strokeColor=#0F172A;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="685" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e1" edge="1" parent="1" source="d4_start" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d4_act_request">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e2" edge="1" parent="1" source="d4_act_request" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d4_act_modal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e3" edge="1" parent="1" source="d4_act_modal" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d4_dec_confirm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e_conf_no" edge="1" parent="1" source="d4_dec_confirm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#1E293B;fontSize=11;align=center;" target="d4_act_cancel" value="[Cancel]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e_cancel_end" edge="1" parent="1" source="d4_act_cancel" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d4_end_cancel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e_conf_yes" edge="1" parent="1" source="d4_dec_confirm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;fontColor=#1E293B;fontSize=11;align=center;" target="d4_act_snapshot" value="[Confirmed]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e4" edge="1" parent="1" source="d4_act_snapshot" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d4_act_os_trash">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e5" edge="1" parent="1" source="d4_act_os_trash" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d4_dec_os_result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e_os_fail" edge="1" parent="1" source="d4_dec_os_result" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#EF4444;strokeWidth=1.5;fontColor=#991B1B;fontSize=11;align=center;" target="d4_act_rollback" value="[OS Error / Locked]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e_fail1" edge="1" parent="1" source="d4_act_rollback" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d4_act_alert_error">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e_fail2" edge="1" parent="1" source="d4_act_alert_error" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d4_act_restore_visual">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e_fail_merge" edge="1" parent="1" source="d4_act_restore_visual" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d4_merge">
+          <mxGeometry relative="1" x="0.2322" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d4_e_os_succ" edge="1" parent="1" source="d4_dec_os_result" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#10B981;strokeWidth=1.5;fontColor=#065F46;fontSize=11;align=center;" target="d4_act_soft_delete" value="[Success (File moved to trash)]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="595" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d4_e_db_link" edge="1" parent="1" source="d4_act_soft_delete" style="edgeStyle=orthogonalEdgeStyle;dashed=1;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6366F1;strokeWidth=1.5;" target="d4_obj_db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e6" edge="1" parent="1" source="d4_act_soft_delete" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d4_act_play_anim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e7" edge="1" parent="1" source="d4_act_play_anim" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d4_act_undo_stack">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e8" edge="1" parent="1" source="d4_act_undo_stack" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d4_merge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="d4_e9" edge="1" parent="1" source="d4_merge" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d4_act_commit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d4_e10" edge="1" parent="1" source="d4_act_commit" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1.5;" target="d4_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
