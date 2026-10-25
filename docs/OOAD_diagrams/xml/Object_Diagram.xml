@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram id="filequest-object-snapshot" name="Object Diagram — Example Snapshot">
+    <mxGraphModel dx="3191" dy="1741" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1580" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=32;fontColor=#182B49;fontStyle=1;" value="FileQuest - Object Diagram" vertex="1">
+          <mxGeometry height="55" width="450" x="695" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="vault" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFFFF;strokeColor=#60A5FA;strokeWidth=1.7;container=1;collapsible=0;" value="" vertex="1">
+          <mxGeometry height="240" width="450" x="80" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="vault-header" parent="vault" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=1.7;fontSize=18;align=center;" value="&lt;u&gt;&lt;b&gt;collegeVault : Vault&lt;/b&gt;&lt;/u&gt;" vertex="1">
+          <mxGeometry height="52" width="450" as="geometry" />
+        </mxCell>
+        <mxCell id="vault-values" parent="vault" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=top;spacing=3;fontSize=15;lineHeight=1.45;" value="vaultId = &amp;quot;v01&amp;quot;&lt;br&gt;rootPath = &amp;quot;/home/alisha/fileQuestVault&amp;quot;&lt;br&gt;displayName = &amp;quot;College Vault&amp;quot;&lt;br&gt;state = &amp;quot;connected&amp;quot;" vertex="1">
+          <mxGeometry height="160" width="420" x="15" y="67" as="geometry" />
+        </mxCell>
+        <mxCell id="environment" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFFFF;strokeColor=#A78BFA;strokeWidth=1.7;container=1;collapsible=0;" value="" vertex="1">
+          <mxGeometry height="240" width="450" x="680" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="environment-header" parent="environment" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;fontSize=18;align=center;" value="&lt;u&gt;&lt;b&gt;studyPalace : Environment&lt;/b&gt;&lt;/u&gt;" vertex="1">
+          <mxGeometry height="52" width="450" as="geometry" />
+        </mxCell>
+        <mxCell id="environment-values" parent="environment" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=top;spacing=3;fontSize=15;lineHeight=1.45;" value="environmentId = &amp;quot;env01&amp;quot;&lt;br&gt;name = &amp;quot;Study Palace&amp;quot;&lt;br&gt;source = &amp;quot;built-in&amp;quot;&lt;br&gt;assetPath = &amp;quot;res://worlds/study_palace.tscn&amp;quot;" vertex="1">
+          <mxGeometry height="160" width="420" x="15" y="67" as="geometry" />
+        </mxCell>
+        <mxCell id="bookmark" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFFFF;strokeColor=#FBBF24;strokeWidth=1.7;container=1;collapsible=0;" value="" vertex="1">
+          <mxGeometry height="240" width="450" x="1280" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="bookmark-header" parent="bookmark" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFBEB;strokeColor=#FBBF24;strokeWidth=1.7;fontSize=18;align=center;" value="&lt;u&gt;&lt;b&gt;deskBookmark : Bookmark&lt;/b&gt;&lt;/u&gt;" vertex="1">
+          <mxGeometry height="52" width="450" as="geometry" />
+        </mxCell>
+        <mxCell id="bookmark-values" parent="bookmark" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=top;spacing=3;fontSize=15;lineHeight=1.45;" value="bookmarkId = &amp;quot;b01&amp;quot;&lt;br&gt;name = &amp;quot;Study Desk&amp;quot;&lt;br&gt;position = (2.0, 1.5, 4.0)&lt;br&gt;cameraRotationDeg = (0, 180, 0)" vertex="1">
+          <mxGeometry height="160" width="420" x="15" y="67" as="geometry" />
+        </mxCell>
+        <mxCell id="pdf" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFFFF;strokeColor=#60A5FA;strokeWidth=1.7;container=1;collapsible=0;" value="" vertex="1">
+          <mxGeometry height="240" width="450" x="80" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="pdf-header" parent="pdf" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=1.7;fontSize=18;align=center;" value="&lt;u&gt;&lt;b&gt;ooadNotes : FileEntry&lt;/b&gt;&lt;/u&gt;" vertex="1">
+          <mxGeometry height="52" width="450" as="geometry" />
+        </mxCell>
+        <mxCell id="pdf-values" parent="pdf" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=top;spacing=3;fontSize=15;lineHeight=1.45;" value="fileId = &amp;quot;f01&amp;quot;&lt;br&gt;name = &amp;quot;OOAD.pdf&amp;quot;&lt;br&gt;relativePath = &amp;quot;College/OOAD.pdf&amp;quot;&lt;br&gt;type = &amp;quot;application/pdf&amp;quot;&lt;br&gt;state = &amp;quot;available&amp;quot;" vertex="1">
+          <mxGeometry height="160" width="420" x="15" y="67" as="geometry" />
+        </mxCell>
+        <mxCell id="room" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFFFF;strokeColor=#A78BFA;strokeWidth=1.7;container=1;collapsible=0;" value="" vertex="1">
+          <mxGeometry height="240" width="450" x="680" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="room-header" parent="room" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;fontSize=18;align=center;" value="&lt;u&gt;&lt;b&gt;studyRoom : Room&lt;/b&gt;&lt;/u&gt;" vertex="1">
+          <mxGeometry height="52" width="450" as="geometry" />
+        </mxCell>
+        <mxCell id="room-values" parent="room" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=top;spacing=3;fontSize=15;lineHeight=1.45;" value="roomId = &amp;quot;r01&amp;quot;&lt;br&gt;name = &amp;quot;Study Room&amp;quot;&lt;br&gt;regionKey = &amp;quot;study_room&amp;quot;&lt;br&gt;isLoaded = true" vertex="1">
+          <mxGeometry height="160" width="420" x="15" y="67" as="geometry" />
+        </mxCell>
+        <mxCell id="tag" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFFFF;strokeColor=#FBBF24;strokeWidth=1.7;container=1;collapsible=0;" value="" vertex="1">
+          <mxGeometry height="240" width="450" x="1280" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="tag-header" parent="tag" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFBEB;strokeColor=#FBBF24;strokeWidth=1.7;fontSize=18;align=center;" value="&lt;u&gt;&lt;b&gt;courseTag : Tag&lt;/b&gt;&lt;/u&gt;" vertex="1">
+          <mxGeometry height="52" width="450" as="geometry" />
+        </mxCell>
+        <mxCell id="tag-values" parent="tag" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=top;spacing=3;fontSize=15;lineHeight=1.45;" value="tagId = &amp;quot;t01&amp;quot;&lt;br&gt;name = &amp;quot;OOAD&amp;quot;&lt;br&gt;color = &amp;quot;#8B5CF6&amp;quot;" vertex="1">
+          <mxGeometry height="160" width="420" x="15" y="67" as="geometry" />
+        </mxCell>
+        <mxCell id="image" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFFFF;strokeColor=#60A5FA;strokeWidth=1.7;container=1;collapsible=0;" value="" vertex="1">
+          <mxGeometry height="240" width="450" x="80" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="image-header" parent="image" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=1.7;fontSize=18;align=center;" value="&lt;u&gt;&lt;b&gt;timetableImage : FileEntry&lt;/b&gt;&lt;/u&gt;" vertex="1">
+          <mxGeometry height="52" width="450" as="geometry" />
+        </mxCell>
+        <mxCell id="image-values" parent="image" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=top;spacing=3;fontSize=15;lineHeight=1.45;" value="fileId = &amp;quot;f02&amp;quot;&lt;br&gt;name = &amp;quot;Timetable.png&amp;quot;&lt;br&gt;relativePath = &amp;quot;College/Timetable.png&amp;quot;&lt;br&gt;type = &amp;quot;image/png&amp;quot;&lt;br&gt;state = &amp;quot;available&amp;quot;" vertex="1">
+          <mxGeometry height="160" width="420" x="15" y="67" as="geometry" />
+        </mxCell>
+        <mxCell id="pdfPlacement" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFFFF;strokeColor=#2DD4BF;strokeWidth=1.7;container=1;collapsible=0;" value="" vertex="1">
+          <mxGeometry height="240" width="450" x="680" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="pdfPlacement-header" parent="pdfPlacement" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1.7;fontSize=18;align=center;" value="&lt;u&gt;&lt;b&gt;deskApple : Placement&lt;/b&gt;&lt;/u&gt;" vertex="1">
+          <mxGeometry height="52" width="450" as="geometry" />
+        </mxCell>
+        <mxCell id="pdfPlacement-values" parent="pdfPlacement" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=top;spacing=3;fontSize=15;lineHeight=1.45;" value="placementId = &amp;quot;p01&amp;quot;&lt;br&gt;position = (2.4, 0.8, 4.1)&lt;br&gt;rotationDeg = (0, 30, 0)&lt;br&gt;scale = (1, 1, 1)&lt;br&gt;visualMeshType = &amp;quot;apple&amp;quot;" vertex="1">
+          <mxGeometry height="160" width="420" x="15" y="67" as="geometry" />
+        </mxCell>
+        <mxCell id="imagePlacement" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFFFF;strokeColor=#2DD4BF;strokeWidth=1.7;container=1;collapsible=0;" value="" vertex="1">
+          <mxGeometry height="240" width="450" x="1280" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="imagePlacement-header" parent="imagePlacement" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1.7;fontSize=18;align=center;" value="&lt;u&gt;&lt;b&gt;wallFrame : Placement&lt;/b&gt;&lt;/u&gt;" vertex="1">
+          <mxGeometry height="52" width="450" as="geometry" />
+        </mxCell>
+        <mxCell id="imagePlacement-values" parent="imagePlacement" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=top;spacing=3;fontSize=15;lineHeight=1.45;" value="placementId = &amp;quot;p02&amp;quot;&lt;br&gt;position = (5.0, 1.8, 0.2)&lt;br&gt;rotationDeg = (0, 0, 0)&lt;br&gt;scale = (1.2, 1.2, 1.2)&lt;br&gt;visualMeshType = &amp;quot;image_frame&amp;quot;" vertex="1">
+          <mxGeometry height="160" width="420" x="15" y="67" as="geometry" />
+        </mxCell>
+        <mxCell id="vault-pdf" edge="1" parent="1" source="vault" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;startArrow=none;strokeColor=#64748B;strokeWidth=1.7;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="pdf" value="indexedFiles">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vault-image" edge="1" parent="1" source="vault" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;startArrow=none;strokeColor=#64748B;strokeWidth=1.7;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="image" value="indexedFiles">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="380" />
+              <mxPoint x="40" y="1180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="env-room" edge="1" parent="1" source="environment" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;startArrow=none;strokeColor=#64748B;strokeWidth=1.7;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="room" value="rooms">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bookmark-room" edge="1" parent="1" source="bookmark" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;startArrow=none;strokeColor=#64748B;strokeWidth=1.7;exitX=0.5;exitY=1;entryX=1;entryY=0.3;" target="room" value="targetRoom">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1505" y="565" />
+              <mxPoint x="1190" y="565" />
+              <mxPoint x="1190" y="732" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="room-pdf-placement" edge="1" parent="1" source="room" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;startArrow=none;strokeColor=#64748B;strokeWidth=1.7;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="pdfPlacement" value="placements">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="room-image-placement" edge="1" parent="1" source="room" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;startArrow=none;strokeColor=#64748B;strokeWidth=1.7;exitX=1;exitY=0.8;entryX=0.5;entryY=0;" target="imagePlacement" value="placements">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1205" y="852" />
+              <mxPoint x="1205" y="1000" />
+              <mxPoint x="1505" y="1000" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pdf-placement-file" edge="1" parent="1" source="pdfPlacement" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;startArrow=none;strokeColor=#64748B;strokeWidth=1.7;exitX=0;exitY=0.5;entryX=1;entryY=0.6;" target="pdf" value="file">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="1180" />
+              <mxPoint x="600" y="804" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="image-placement-file" edge="1" parent="1" source="imagePlacement" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;startArrow=none;strokeColor=#64748B;strokeWidth=1.7;exitX=0.5;exitY=1;entryX=0.5;entryY=1;" target="image" value="file">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1505" y="1340" />
+              <mxPoint x="305" y="1340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="file-tag" edge="1" parent="1" source="pdf" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;startArrow=none;strokeColor=#64748B;strokeWidth=1.7;exitX=0.8;exitY=0;entryX=0.5;entryY=0;" target="tag" value="tags">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="610" />
+              <mxPoint x="1505" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-panel" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=1;arcSize=10;fillColor=#F1F5F9;strokeColor=#CBD5E1;" value="" vertex="1">
+          <mxGeometry height="150" width="905" x="400" y="1382.5" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=13;fontColor=#334155;fontStyle=1;" value="LEGEND — UML OBJECT DIAGRAM" vertex="1">
+          <mxGeometry height="25" width="1650" x="780" y="1405" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-body" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=14;fontColor=#61738B;fontStyle=0;" value="&lt;u&gt;&lt;b&gt;instanceName : ClassName&lt;/b&gt;&lt;/u&gt;  A specific object instance (underlined header)&lt;br&gt;&lt;b&gt;attribute = value&lt;/b&gt;  The object’s state at this moment &amp;nbsp; · &amp;nbsp; &lt;b&gt;Solid line&lt;/b&gt;  A link between these instances &amp;nbsp; · &amp;nbsp; &lt;b&gt;Link label&lt;/b&gt;  Association role" vertex="1">
+          <mxGeometry height="55" width="1650" x="410" y="1430" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-colors" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=12;fontColor=#61738B;fontStyle=0;" value="Blue: indexed filesystem objects · Purple: environment / room · Teal: spatial placements · Amber: retrieval aids. Colour has no UML semantics." vertex="1">
+          <mxGeometry height="25" width="1650" x="410" y="1485" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

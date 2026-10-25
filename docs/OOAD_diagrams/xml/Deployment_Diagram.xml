@@ -1,118 +1,111 @@
-<?xml version='1.0' encoding='utf-8'?>
-<mxfile host="app.diagrams.net" version="24.7.17" type="device">
+<mxfile host="app.diagrams.net">
   <diagram id="filequest-native-deployment" name="Native Desktop Deployment v1.0">
-    <mxGraphModel dx="1840" dy="1550" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1550" math="0" shadow="0" background="#FFFFFF">
+    <mxGraphModel dx="2260" dy="1233" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1550" background="#FFFFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="kicker" value="FILEQUEST / OOAD / NATIVE DESKTOP v1.0" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=12;fontColor=#61738B;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="60" y="28" width="1500" height="24" />
+        <mxCell id="title" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=36;fontColor=#182B49;fontStyle=1;" value="FileQuest - Deployment Diagram" vertex="1">
+          <mxGeometry height="56" width="580" x="647.5" y="120" as="geometry" />
         </mxCell>
-        <mxCell id="title" value="Deployment Diagram" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=36;fontColor=#182B49;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="60" y="62" width="1600" height="56" />
+        <mxCell id="computer" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=cube;size=20;fillColor=#F8FAFC;strokeColor=#94A3B8;strokeWidth=2;align=left;verticalAlign=top;spacingTop=25;spacingLeft=30;fontSize=20;container=1;collapsible=0;" value="&amp;lt;&amp;lt;device&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;User’s Desktop / Laptop&lt;/b&gt;" vertex="1">
+          <mxGeometry height="1110" width="1760" x="35" y="190" as="geometry" />
         </mxCell>
-        <mxCell id="subtitle" value="Godot 4 (.NET / C#) · Embedded SQLite · Filesystem-first spatial overlay" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=17;fontColor=#61738B;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="60" y="123" width="1700" height="30" />
+        <mxCell id="os" parent="computer" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=cube;size=16;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.7;align=left;verticalAlign=top;spacingTop=25;spacingLeft=28;fontSize=18;container=1;collapsible=0;" value="&amp;lt;&amp;lt;executionEnvironment&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Desktop Operating System — Windows OR Linux OR macOS&lt;/b&gt;" vertex="1">
+          <mxGeometry height="965" width="1677.6608187134502" x="46.0033918128655" y="102" as="geometry" />
         </mxCell>
-        <mxCell id="computer" value="&amp;lt;&amp;lt;device&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;User’s Desktop / Laptop&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=cube;size=20;fillColor=#F8FAFC;strokeColor=#94A3B8;strokeWidth=2;align=left;verticalAlign=top;spacingTop=25;spacingLeft=30;fontSize=20;container=1;collapsible=0;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="60" y="190" width="1710" height="1110" />
+        <mxCell id="runtime" parent="os" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=cube;size=15;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=2;align=left;verticalAlign=top;spacingTop=25;spacingLeft=25;fontSize=18;container=1;collapsible=0;" value="&amp;lt;&amp;lt;executionEnvironment&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;fileQuest Process — Godot 4.x + .NET Runtime&lt;/b&gt;" vertex="1">
+          <mxGeometry height="440" width="859.4152046783626" x="46.315789473684205" y="115" as="geometry" />
         </mxCell>
-        <mxCell id="os" value="&amp;lt;&amp;lt;executionEnvironment&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Desktop Operating System — Windows OR Linux OR macOS&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=cube;size=16;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.7;align=left;verticalAlign=top;spacingTop=25;spacingLeft=28;fontSize=18;container=1;collapsible=0;" vertex="1" parent="computer">
-          <mxGeometry as="geometry" x="35" y="100" width="1630" height="965" />
+        <mxCell id="app" parent="runtime" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#FFFFFF;strokeColor=#93C5FD;strokeWidth=1.5;align=left;spacingLeft=18;spacingRight=13;fontSize=15;" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;fileQuest Native Export + C# Assemblies&lt;/b&gt;&lt;br&gt;&lt;br&gt;Godot scenes, UI, search and spatial placement&lt;br&gt;File operations, previews and reconciliation&lt;br&gt;System.IO watcher + periodic scans&lt;br&gt;Platform adapters: identity, launcher and trash" vertex="1">
+          <mxGeometry height="220" width="340" x="25.73" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="runtime" value="&amp;lt;&amp;lt;executionEnvironment&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;fileQuest Process — Godot 4.x + .NET Runtime&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=cube;size=15;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=2;align=left;verticalAlign=top;spacingTop=25;spacingLeft=25;fontSize=18;container=1;collapsible=0;" vertex="1" parent="os">
-          <mxGeometry as="geometry" x="45" y="115" width="835" height="440" />
+        <mxCell id="sqlite-libs" parent="runtime" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1.5;align=left;spacingLeft=18;spacingRight=13;fontSize=15;" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;SQLite Provider + Engine&lt;/b&gt;&lt;br&gt;&lt;br&gt;Microsoft.Data.Sqlite&lt;br&gt;Native SQLite library&lt;br&gt;&lt;i&gt;Embedded in this process&lt;/i&gt;" vertex="1">
+          <mxGeometry height="150" width="293.3333333333333" x="519.766081871345" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="app" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;fileQuest Native Export + C# Assemblies&lt;/b&gt;&lt;br&gt;&lt;br&gt;Godot scenes, UI, search and spatial placement&lt;br&gt;File operations, previews and reconciliation&lt;br&gt;System.IO watcher + periodic scans&lt;br&gt;Platform adapters: identity, launcher and trash" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#FFFFFF;strokeColor=#93C5FD;strokeWidth=1.5;align=left;spacingLeft=18;spacingRight=13;fontSize=15;" vertex="1" parent="runtime">
-          <mxGeometry as="geometry" x="25" y="100" width="450" height="220" />
+        <mxCell id="package" parent="runtime" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#FFFFFF;strokeColor=#93C5FD;strokeWidth=1.5;align=left;spacingLeft=18;spacingRight=13;fontSize=15;" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Exported Resources&lt;/b&gt;&lt;br&gt;Godot resource pack / assets&lt;br&gt;Scenes, meshes and shaders" vertex="1">
+          <mxGeometry height="125" width="293.3333333333333" x="519.766081871345" y="270" as="geometry" />
         </mxCell>
-        <mxCell id="sqlite-libs" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;SQLite Provider + Engine&lt;/b&gt;&lt;br&gt;&lt;br&gt;Microsoft.Data.Sqlite&lt;br&gt;Native SQLite library&lt;br&gt;&lt;i&gt;Embedded in this process&lt;/i&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1.5;align=left;spacingLeft=18;spacingRight=13;fontSize=15;" vertex="1" parent="runtime">
-          <mxGeometry as="geometry" x="505" y="100" width="285" height="150" />
+        <mxCell id="services" parent="os" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=cube;size=14;fillColor=#FFF7ED;strokeColor=#FB923C;strokeWidth=1.7;align=left;verticalAlign=top;spacingTop=22;spacingLeft=24;fontSize=16;" value="&amp;lt;&amp;lt;executionEnvironment&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Native OS Services&lt;/b&gt;&lt;br&gt;&lt;br&gt;Filesystem APIs and change notifications&lt;br&gt;File identity and permissions&lt;br&gt;File associations / process launch&lt;br&gt;Trash / recycle-bin integration" vertex="1">
+          <mxGeometry height="245" width="458.01169590643275" x="1163.0409356725145" y="115" as="geometry" />
         </mxCell>
-        <mxCell id="package" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Exported Resources&lt;/b&gt;&lt;br&gt;Godot resource pack / assets&lt;br&gt;Scenes, meshes and shaders" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#FFFFFF;strokeColor=#93C5FD;strokeWidth=1.5;align=left;spacingLeft=18;spacingRight=13;fontSize=15;" vertex="1" parent="runtime">
-          <mxGeometry as="geometry" x="505" y="270" width="285" height="125" />
+        <mxCell id="native-apps" parent="os" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=cube;size=14;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;align=left;verticalAlign=top;spacingTop=20;spacingLeft=24;fontSize=15;" value="&amp;lt;&amp;lt;executionEnvironment&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;External Desktop Application Processes&lt;/b&gt;&lt;br&gt;&lt;br&gt;PDF reader · Image editor · IDE · Media player&lt;br&gt;Explorer / Finder / desktop file manager" vertex="1">
+          <mxGeometry height="155" width="458.01169590643275" x="1163.0409356725145" y="450" as="geometry" />
         </mxCell>
-        <mxCell id="services" value="&amp;lt;&amp;lt;executionEnvironment&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Native OS Services&lt;/b&gt;&lt;br&gt;&lt;br&gt;Filesystem APIs and change notifications&lt;br&gt;File identity and permissions&lt;br&gt;File associations / process launch&lt;br&gt;Trash / recycle-bin integration" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=cube;size=14;fillColor=#FFF7ED;strokeColor=#FB923C;strokeWidth=1.7;align=left;verticalAlign=top;spacingTop=22;spacingLeft=24;fontSize=16;" vertex="1" parent="os">
-          <mxGeometry as="geometry" x="1130" y="115" width="445" height="245" />
+        <mxCell id="db" parent="os" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#F0FDFA;strokeColor=#14B8A6;strokeWidth=1.5;align=left;spacingLeft=18;spacingRight=13;fontSize=15;" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Spatial Metadata Database (.sqlite)&lt;/b&gt;&lt;br&gt;&lt;br&gt;File identity, paths, tags and bookmarks&lt;br&gt;Environments, rooms and placements&lt;br&gt;Transactions, migrations and history" vertex="1">
+          <mxGeometry height="145" width="488.88888888888886" x="72.046783625731" y="745" as="geometry" />
         </mxCell>
-        <mxCell id="native-apps" value="&amp;lt;&amp;lt;executionEnvironment&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;External Desktop Application Processes&lt;/b&gt;&lt;br&gt;&lt;br&gt;PDF reader · Image editor · IDE · Media player&lt;br&gt;Explorer / Finder / desktop file manager" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=cube;size=14;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;align=left;verticalAlign=top;spacingTop=20;spacingLeft=24;fontSize=15;" vertex="1" parent="os">
-          <mxGeometry as="geometry" x="1130" y="450" width="445" height="155" />
+        <mxCell id="vault" parent="os" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#F8FAFC;strokeColor=#64748B;strokeWidth=1.5;align=left;spacingLeft=18;spacingRight=13;fontSize=15;" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Palace Root Vault — Ordinary OS Files&lt;/b&gt;&lt;br&gt;&lt;br&gt;Example: ~/fileQuestVault/&lt;br&gt;Original files remain directly accessible&lt;br&gt;&lt;b&gt;Filesystem = source of truth&lt;/b&gt;" vertex="1">
+          <mxGeometry height="145" width="488.88888888888886" x="622.6900584795321" y="745" as="geometry" />
         </mxCell>
-        <mxCell id="db" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Spatial Metadata Database (.sqlite)&lt;/b&gt;&lt;br&gt;&lt;br&gt;File identity, paths, tags and bookmarks&lt;br&gt;Environments, rooms and placements&lt;br&gt;Transactions, migrations and history" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#F0FDFA;strokeColor=#14B8A6;strokeWidth=1.5;align=left;spacingLeft=18;spacingRight=13;fontSize=15;" vertex="1" parent="os">
-          <mxGeometry as="geometry" x="70" y="745" width="475" height="145" />
+        <mxCell id="assets" parent="os" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#F8FAFC;strokeColor=#94A3B8;strokeWidth=1.5;align=left;spacingLeft=18;spacingRight=13;fontSize=15;" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Local Assets, Cache and Backups&lt;/b&gt;&lt;br&gt;&lt;br&gt;Imported 3D environments (.glb / .gltf)&lt;br&gt;Generated thumbnails and previews&lt;br&gt;Spatial metadata backup / export" vertex="1">
+          <mxGeometry height="145" width="447.719298245614" x="1173.3333333333333" y="745" as="geometry" />
         </mxCell>
-        <mxCell id="vault" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Palace Root Vault — Ordinary OS Files&lt;/b&gt;&lt;br&gt;&lt;br&gt;Example: ~/fileQuestVault/&lt;br&gt;Original files remain directly accessible&lt;br&gt;&lt;b&gt;Filesystem = source of truth&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#F8FAFC;strokeColor=#64748B;strokeWidth=1.5;align=left;spacingLeft=18;spacingRight=13;fontSize=15;" vertex="1" parent="os">
-          <mxGeometry as="geometry" x="605" y="745" width="475" height="145" />
+        <mxCell id="sqlite-access" edge="1" parent="os" source="app" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#0F766E;exitX=1;exitY=0.3;entryX=0;entryY=0.45;" target="sqlite-libs" value="«use»&lt;br&gt;Metadata repository">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="assets" value="&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Local Assets, Cache and Backups&lt;/b&gt;&lt;br&gt;&lt;br&gt;Imported 3D environments (.glb / .gltf)&lt;br&gt;Generated thumbnails and previews&lt;br&gt;Spatial metadata backup / export" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#F8FAFC;strokeColor=#94A3B8;strokeWidth=1.5;align=left;spacingLeft=18;spacingRight=13;fontSize=15;" vertex="1" parent="os">
-          <mxGeometry as="geometry" x="1140" y="745" width="435" height="145" />
-        </mxCell>
-        <mxCell id="sqlite-access" value="«use»&lt;br&gt;Metadata repository" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#0F766E;exitX=1;exitY=0.3;entryX=0;entryY=0.45;" edge="1" parent="os" source="app" target="sqlite-libs">
-          <mxGeometry as="geometry" relative="1" />
-        </mxCell>
-        <mxCell id="db-access" value="«use» Read / write metadata" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#0F766E;exitX=0.5;exitY=1;entryX=0.75;entryY=0;" edge="1" parent="os" source="sqlite-libs" target="db">
-          <mxGeometry as="geometry" relative="1">
+        <mxCell id="db-access" edge="1" parent="os" source="sqlite-libs" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#0F766E;exitX=0.5;exitY=1;entryX=0.75;entryY=0;" target="db" value="«use» Read / write metadata">
+          <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="692" y="585" />
-              <mxPoint x="426" y="585" />
+              <mxPoint x="712.233918128655" y="585" />
+              <mxPoint x="438.45614035087715" y="585" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="vault-access" value="«use» Index / read / file operations&lt;br&gt;Watcher hints + reconciliation scans" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=0.7;exitY=1;entryX=0.25;entryY=0;" edge="1" parent="os" source="app" target="vault">
-          <mxGeometry as="geometry" relative="1">
+        <mxCell id="vault-access" edge="1" parent="os" source="app" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=0.7;exitY=1;entryX=0.25;entryY=0;" target="vault" value="«use» Index / read / file operations&lt;br&gt;Watcher hints + reconciliation scans">
+          <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="385" y="655" />
-              <mxPoint x="724" y="655" />
+              <mxPoint x="396.2573099415204" y="655" />
+              <mxPoint x="745.1695906432748" y="655" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="platform" value="«use» Platform APIs&lt;br&gt;Watch / launch / trash" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#D97706;exitX=1;exitY=0.25;entryX=0;entryY=0.45;" edge="1" parent="os" source="runtime" target="services">
-          <mxGeometry as="geometry" relative="1" />
+        <mxCell id="platform" edge="1" parent="os" source="runtime" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#D97706;exitX=1;exitY=0.25;entryX=0;entryY=0.45;" target="services" value="«use» Platform APIs&lt;br&gt;Watch / launch / trash">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="launch" value="«use» Launch via file association" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#7C3AED;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="os" source="services" target="native-apps">
-          <mxGeometry as="geometry" relative="1" />
+        <mxCell id="launch" edge="1" parent="os" source="services" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#7C3AED;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="native-apps" value="«use» Launch via file association">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="asset-access" value="«use» Import / cache / backup" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=1;exitY=0.88;entryX=0.25;entryY=0;" edge="1" parent="os" source="runtime" target="assets">
-          <mxGeometry as="geometry" relative="1">
+        <mxCell id="asset-access" edge="1" parent="os" source="runtime" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=1;exitY=0.88;entryX=0.25;entryY=0;" target="assets" value="«use» Import / cache / backup">
+          <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="990" y="502" />
-              <mxPoint x="990" y="690" />
-              <mxPoint x="1249" y="690" />
+              <mxPoint x="1018.9473684210526" y="502" />
+              <mxPoint x="1018.9473684210526" y="690" />
+              <mxPoint x="1285.5204678362572" y="690" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="principle" value="&lt;b&gt;Local-first&lt;/b&gt;&lt;br&gt;One native build per target OS.&lt;br&gt;Core operation works offline.&lt;br&gt;Metadata is separate from file contents." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#526784;text;align=left;verticalAlign=middle;fontSize=14;" vertex="1" parent="os">
-          <mxGeometry as="geometry" x="70" y="575" width="290" height="125" />
+        <mxCell id="principle" parent="os" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#526784;text;align=left;verticalAlign=middle;fontSize=14;" value="&lt;b&gt;Local-first&lt;/b&gt;&lt;br&gt;One native build per target OS.&lt;br&gt;Core operation works offline.&lt;br&gt;Metadata is separate from file contents." vertex="1">
+          <mxGeometry height="125" width="298.47953216374265" x="72.046783625731" y="575" as="geometry" />
         </mxCell>
-        <mxCell id="legend-panel" value="" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=1;arcSize=10;fillColor=#F1F5F9;strokeColor=#CBD5E1;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="60" y="1340" width="1710" height="155" />
+        <mxCell id="legend-panel" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=1;arcSize=10;fillColor=#F1F5F9;strokeColor=#CBD5E1;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="155" width="1710" x="60" y="1340" as="geometry" />
         </mxCell>
-        <mxCell id="legend-title" value="LEGEND — UML DEPLOYMENT NOTATION" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=13;fontColor=#334155;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="85" y="1355" width="1600" height="25" />
+        <mxCell id="legend-title" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=13;fontColor=#334155;fontStyle=1;" value="LEGEND — UML DEPLOYMENT NOTATION" vertex="1">
+          <mxGeometry height="25" width="1600" x="85" y="1355" as="geometry" />
         </mxCell>
-        <mxCell id="legend-node" value="Node" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=cube;size=9;fillColor=#EFF6FF;strokeColor=#3B82F6;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="90" y="1402" width="65" height="50" />
+        <mxCell id="legend-node" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=cube;size=9;fillColor=#EFF6FF;strokeColor=#3B82F6;fontSize=11;" value="Node" vertex="1">
+          <mxGeometry height="50" width="65" x="90" y="1402" as="geometry" />
         </mxCell>
-        <mxCell id="legend-node-text" value="&lt;b&gt;3D box&lt;/b&gt;&lt;br&gt;Device or execution environment" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=13;fontColor=#61738B;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="175" y="1400" width="330" height="55" />
+        <mxCell id="legend-node-text" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=13;fontColor=#61738B;fontStyle=0;" value="&lt;b&gt;3D box&lt;/b&gt;&lt;br&gt;Device or execution environment" vertex="1">
+          <mxGeometry height="55" width="330" x="175" y="1400" as="geometry" />
         </mxCell>
-        <mxCell id="legend-artifact" value="Artifact" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=12;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="550" y="1402" width="75" height="50" />
+        <mxCell id="legend-artifact" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=12;fillColor=#FFFFFF;strokeColor=#64748B;fontSize=11;" value="Artifact" vertex="1">
+          <mxGeometry height="50" width="75" x="550" y="1402" as="geometry" />
         </mxCell>
-        <mxCell id="legend-artifact-text" value="&lt;b&gt;Folded-corner rectangle&lt;/b&gt;&lt;br&gt;Deployable or stored file(s)" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=13;fontColor=#61738B;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="645" y="1400" width="340" height="55" />
+        <mxCell id="legend-artifact-text" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=13;fontColor=#61738B;fontStyle=0;" value="&lt;b&gt;Folded-corner rectangle&lt;/b&gt;&lt;br&gt;Deployable or stored file(s)" vertex="1">
+          <mxGeometry height="55" width="340" x="645" y="1400" as="geometry" />
         </mxCell>
-        <mxCell id="legend-arrow" style="dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;strokeWidth=1.7;" edge="1" parent="1">
-          <mxGeometry as="geometry" relative="1">
-            <mxPoint as="sourcePoint" x="1080" y="1428" />
-            <mxPoint as="targetPoint" x="1160" y="1428" />
+        <mxCell id="legend-arrow" edge="1" parent="1" style="dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;strokeWidth=1.7;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="1428" as="sourcePoint" />
+            <mxPoint x="1160" y="1428" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="legend-arrow-text" value="&lt;b&gt;Dashed open arrow: «use»&lt;/b&gt;&lt;br&gt;Source depends on target; nesting shows hosting" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=13;fontColor=#61738B;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="1180" y="1400" width="550" height="55" />
+        <mxCell id="legend-arrow-text" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=13;fontColor=#61738B;fontStyle=0;" value="&lt;b&gt;Dashed open arrow: «use»&lt;/b&gt;&lt;br&gt;Source depends on target; nesting shows hosting" vertex="1">
+          <mxGeometry height="55" width="550" x="1180" y="1400" as="geometry" />
         </mxCell>
-        <mxCell id="legend-footer" value="Colours group runtime, database and OS integration; they do not add UML semantics. Deployment view follows the supplied fileQuest v1.0 plan." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=12;fontColor=#61738B;fontStyle=0;" vertex="1" parent="1">
-          <mxGeometry as="geometry" x="85" y="1460" width="1640" height="23" />
+        <mxCell id="legend-footer" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=12;fontColor=#61738B;fontStyle=0;" value="Colours group runtime, database and OS integration; they do not add UML semantics. Deployment view follows the supplied fileQuest v1.0 plan." vertex="1">
+          <mxGeometry height="23" width="1640" x="85" y="1460" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

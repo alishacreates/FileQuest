@@ -1,0 +1,96 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="filequest-communication-open" name="Communication — Open a File">
+    <mxGraphModel dx="2782" dy="1518" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2440" pageHeight="1540" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=36;fontColor=#182B49;fontStyle=1;" value="FileQuest - Communication Diagram" vertex="1">
+          <mxGeometry height="55" width="725" x="750" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2.2;fontSize=20;" value="User" vertex="1">
+          <mxGeometry height="125" width="80" x="100" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="ui" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=1.8;align=center;spacing=16;fontSize=17;" value="&lt;u&gt;&lt;b&gt;ui : GodotPresentation&lt;/b&gt;&lt;/u&gt;&lt;br&gt;&lt;br&gt;Selected spatial object&lt;br&gt;fileId = &quot;f01&quot;" vertex="1">
+          <mxGeometry height="180" width="420" x="520" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="service" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.8;align=center;spacing=16;fontSize=17;" value="&lt;u&gt;&lt;b&gt;fileOps : FileOperationService&lt;/b&gt;&lt;/u&gt;&lt;br&gt;&lt;br&gt;Coordinates lookup, resolution&lt;br&gt;and native launch" vertex="1">
+          <mxGeometry height="180" width="460" x="1220" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="repository" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1.8;align=center;spacing=16;fontSize=17;" value="&lt;u&gt;&lt;b&gt;metadata : SQLiteRepository&lt;/b&gt;&lt;/u&gt;&lt;br&gt;&lt;br&gt;Lookup logical identity&lt;br&gt;and saved local path" vertex="1">
+          <mxGeometry height="170" width="450" x="1870" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="filesystem" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFF7ED;strokeColor=#FB923C;strokeWidth=1.8;align=center;spacing=16;fontSize=17;" value="&lt;u&gt;&lt;b&gt;files : FileSystemIntegration&lt;/b&gt;&lt;/u&gt;&lt;br&gt;&lt;br&gt;Resolve current identity / path&lt;br&gt;Check existence and access" vertex="1">
+          <mxGeometry height="170" width="450" x="1870" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="launcher" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFF7ED;strokeColor=#FB923C;strokeWidth=1.8;align=center;spacing=16;fontSize=17;" value="&lt;u&gt;&lt;b&gt;launcher : IFileLauncher&lt;/b&gt;&lt;/u&gt;&lt;br&gt;&lt;br&gt;OS-specific native-launch adapter" vertex="1">
+          <mxGeometry height="160" width="460" x="1220" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="os" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFF7ED;strokeColor=#FB923C;strokeWidth=1.8;align=center;spacing=16;fontSize=17;" value="&lt;u&gt;&lt;b&gt;os : NativeLaunchService&lt;/b&gt;&lt;/u&gt;&lt;br&gt;&lt;br&gt;OS file association mechanism&lt;br&gt;Dispatches to a desktop application" vertex="1">
+          <mxGeometry height="160" width="450" x="1870" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="link-0" edge="1" parent="1" source="actor" style="html=1;fontFamily=Helvetica;fontSize=15;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#CBD5E1;strokeWidth=3;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="ui" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link-1" edge="1" parent="1" source="ui" style="html=1;fontFamily=Helvetica;fontSize=15;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#CBD5E1;strokeWidth=3;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="service" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link-2" edge="1" parent="1" source="service" style="html=1;fontFamily=Helvetica;fontSize=15;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#CBD5E1;strokeWidth=3;exitX=1;exitY=0.2;entryX=0;entryY=0.5;" target="repository" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link-3" edge="1" parent="1" source="service" style="html=1;fontFamily=Helvetica;fontSize=15;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#CBD5E1;strokeWidth=3;exitX=1;exitY=0.8;entryX=0;entryY=0.5;" target="filesystem" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link-4" edge="1" parent="1" source="service" style="html=1;fontFamily=Helvetica;fontSize=15;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#CBD5E1;strokeWidth=3;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="launcher" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="link-5" edge="1" parent="1" source="launcher" style="html=1;fontFamily=Helvetica;fontSize=15;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=none;strokeColor=#CBD5E1;strokeWidth=3;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="os" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="message-1" edge="1" parent="1" source="actor" style="html=1;fontFamily=Helvetica;fontSize=15;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;strokeColor=#2563EB;strokeWidth=1.8;exitX=1;exitY=0.25;entryX=0;entryY=0.25;" target="ui" value="&lt;b&gt;1:&lt;/b&gt; openSelectedFile(fileId)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="message-11" edge="1" parent="1" source="ui" style="html=1;fontFamily=Helvetica;fontSize=15;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;strokeColor=#2563EB;strokeWidth=1.8;exitX=1;exitY=0.25;entryX=0;entryY=0.25;" target="service" value="&lt;b&gt;1.1:&lt;/b&gt; openFile(fileId)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="message-111" edge="1" parent="1" source="service" style="html=1;fontFamily=Helvetica;fontSize=15;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;strokeColor=#2563EB;strokeWidth=1.8;exitX=1;exitY=0.1;entryX=0;entryY=0.3;" target="repository" value="&lt;b&gt;1.1.1:&lt;/b&gt; record := findById(fileId)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="message-112" edge="1" parent="1" source="service" style="html=1;fontFamily=Helvetica;fontSize=15;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;strokeColor=#2563EB;strokeWidth=1.8;exitX=1;exitY=0.9;entryX=0;entryY=0.65;" target="filesystem" value="&lt;b&gt;1.1.2:&lt;/b&gt; verified :=&lt;br&gt;resolveAndCheck(record)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1770" y="522" />
+              <mxPoint x="1770" y="781" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="message-113" edge="1" parent="1" source="service" style="html=1;fontFamily=Helvetica;fontSize=15;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;strokeColor=#2563EB;strokeWidth=1.8;exitX=0.35;exitY=1;entryX=0.35;entryY=0;" target="launcher" value="&lt;b&gt;1.1.3:&lt;/b&gt; launchResult :=&lt;br&gt;openNative(verified.path)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="message-1131" edge="1" parent="1" source="launcher" style="html=1;fontFamily=Helvetica;fontSize=15;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;strokeColor=#2563EB;strokeWidth=1.8;exitX=1;exitY=0.25;entryX=0;entryY=0.25;" target="os" value="&lt;b&gt;1.1.3.1:&lt;/b&gt;&lt;br&gt;requestDefaultAppOpen(path)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="reply-service" edge="1" parent="1" source="service" style="html=1;fontFamily=Helvetica;fontSize=15;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;strokeWidth=1.6;exitX=0;exitY=0.8;entryX=1;entryY=0.8;" target="ui" value="launchResult">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="message-12" edge="1" parent="1" source="ui" style="html=1;fontFamily=Helvetica;fontSize=15;fontColor=#334155;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=open;endFill=0;strokeColor=#2563EB;strokeWidth=1.8;exitX=0;exitY=0.85;entryX=1;entryY=0.85;" target="actor" value="&lt;b&gt;1.2:&lt;/b&gt; displayLaunchStatus(status)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="scenario-note" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#F8FAFC;strokeColor=#CBD5E1;align=left;verticalAlign=top;spacing=18;fontSize=16;" value="&lt;b&gt;Example resolution&lt;/b&gt;&lt;br&gt;&lt;br&gt;fileId: &quot;f01&quot;&lt;br&gt;Path: /home/alisha/fileQuestVault/College/OOAD.pdf&lt;br&gt;File contents remain in the ordinary vault.&lt;br&gt;SQLite supplies metadata; it does not open the file." vertex="1">
+          <mxGeometry height="200" width="930" x="65" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="semantics-note" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#FFFBEB;strokeColor=#D4AC45;align=left;verticalAlign=top;spacing=18;fontSize=16;" value="&lt;b&gt;Reading the messages&lt;/b&gt;&lt;br&gt;&lt;br&gt;1.1.1 → 1.1.2 → 1.1.3 execute in order.&lt;br&gt;1.1.3.1 is nested inside the launcher call.&lt;br&gt;Assignments (:=) show synchronous results.&lt;br&gt;&lt;br&gt;If the file is missing, inaccessible or ambiguous,&lt;br&gt;stop before launch and request reconciliation.&lt;br&gt;Launch accepted does not prove the file loaded." vertex="1">
+          <mxGeometry height="290" width="930" x="65" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-panel" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=1;arcSize=10;fillColor=#F1F5F9;strokeColor=#CBD5E1;" value="" vertex="1">
+          <mxGeometry height="130" width="2255" x="65" y="1370" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=13;fontColor=#334155;fontStyle=1;" value="LEGEND — UML COMMUNICATION DIAGRAM" vertex="1">
+          <mxGeometry height="25" width="2200" x="85" y="1380" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-body" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=14;fontColor=#61738B;fontStyle=0;" value="&lt;u&gt;&lt;b&gt;role : Type&lt;/b&gt;&lt;/u&gt;  Runtime participant &amp;nbsp; · &amp;nbsp; &lt;b&gt;Stick figure&lt;/b&gt;  User actor &amp;nbsp; · &amp;nbsp; &lt;b&gt;Grey solid line&lt;/b&gt;  Communication link&lt;br&gt;&lt;b&gt;Blue open arrow + number&lt;/b&gt;  Directed message; hierarchical numbering gives execution order and nesting &amp;nbsp; · &amp;nbsp; &lt;b&gt;Dashed open arrow&lt;/b&gt;  Reply&lt;br&gt;&lt;b&gt;:=&lt;/b&gt;  Returned result assigned to a value. Spatial layout shows collaboration, not elapsed time. Colours group responsibilities only." vertex="1">
+          <mxGeometry height="70" width="2200" x="85" y="1417" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,244 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram id="native-core" name="01 — Core MVP">
+    <mxGraphModel dx="2009" dy="1096" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1950" pageHeight="1570" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=34;fontColor=#182B49;fontStyle=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;FileQuest - Use Case Diagram" vertex="1">
+          <mxGeometry height="55" width="560" x="840" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#F8FAFC;strokeColor=#94A3B8;strokeWidth=2;align=left;verticalAlign=top;spacingTop=22;spacingLeft=28;fontSize=23;" value="&lt;b&gt;fileQuest — Native Desktop Application&lt;/b&gt;" vertex="1">
+          <mxGeometry height="1180" width="1530" x="350" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="user" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2.5;fontSize=21;fontStyle=1;" value="User" vertex="1">
+          <mxGeometry height="130" width="80" x="130" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="user-note" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=15;fontColor=#61738B;fontStyle=0;" value="Local desktop user" vertex="1">
+          <mxGeometry height="40" width="230" x="75" y="795" as="geometry" />
+        </mxCell>
+        <mxCell id="vault" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" value="Choose / connect a vault directory" vertex="1">
+          <mxGeometry height="78" width="500" x="470" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="explore" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" value="Explore the built-in 3D room" vertex="1">
+          <mxGeometry height="78" width="500" x="470" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="place" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" value="Place / reposition a file object" vertex="1">
+          <mxGeometry height="78" width="500" x="470" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="inbox" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" value="Find new files in Lost &amp; Found" vertex="1">
+          <mxGeometry height="78" width="500" x="470" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="search" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" value="Search for a file" vertex="1">
+          <mxGeometry height="78" width="500" x="470" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="inspect" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" value="&lt;b&gt;Inspect a file object&lt;/b&gt;&lt;br&gt;_________________________&lt;br&gt;&lt;i&gt;extension point: file actions available&lt;/i&gt;" vertex="1">
+          <mxGeometry height="120" width="500" x="470" y="925" as="geometry" />
+        </mxCell>
+        <mxCell id="scan" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" value="Scan vault and index file metadata" vertex="1">
+          <mxGeometry height="78" width="480" x="1300" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="save" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" value="Persist spatial placement" vertex="1">
+          <mxGeometry height="78" width="480" x="1300" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="query" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" value="Query indexed file metadata" vertex="1">
+          <mxGeometry height="78" width="480" x="1300" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="teleport" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" value="Teleport near a search result" vertex="1">
+          <mxGeometry height="78" width="480" x="1300" y="925" as="geometry" />
+        </mxCell>
+        <mxCell id="preview" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" value="Preview text or image" vertex="1">
+          <mxGeometry height="78" width="420" x="470" y="1140" as="geometry" />
+        </mxCell>
+        <mxCell id="open" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" value="Open file in its native application" vertex="1">
+          <mxGeometry height="78" width="600" x="1120" y="1140" as="geometry" />
+        </mxCell>
+        <mxCell id="resolve" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" value="Resolve current local file path" vertex="1">
+          <mxGeometry height="78" width="480" x="950" y="1270" as="geometry" />
+        </mxCell>
+        <mxCell id="user-vault" edge="1" parent="1" source="user" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;endArrow=none;strokeColor=#94A3B8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="vault" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="user-explore" edge="1" parent="1" source="user" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;endArrow=none;strokeColor=#94A3B8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="explore" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="user-place" edge="1" parent="1" source="user" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;endArrow=none;strokeColor=#94A3B8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="place" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="user-inbox" edge="1" parent="1" source="user" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;endArrow=none;strokeColor=#94A3B8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="inbox" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="user-search" edge="1" parent="1" source="user" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;endArrow=none;strokeColor=#94A3B8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="search" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="user-inspect" edge="1" parent="1" source="user" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;endArrow=none;strokeColor=#94A3B8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="inspect" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="include-vault-scan" edge="1" parent="1" source="vault" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="scan" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="include-place-save" edge="1" parent="1" source="place" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="save" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="include-search-query" edge="1" parent="1" source="search" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="query" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="include-preview-resolve" edge="1" parent="1" source="preview" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=0.7;exitY=1;entryX=0.1;entryY=0;" target="resolve" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="include-open-resolve" edge="1" parent="1" source="open" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=0.45;exitY=1;entryX=0.9;entryY=0;" target="resolve" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="extend-preview-inspect" edge="1" parent="1" source="preview" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#0F766E;exitX=0.5;exitY=0;entryX=0.4;entryY=1;" target="inspect" value="«extend»&lt;br&gt;[Preview requested; supported file type]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="extend-open-inspect" edge="1" parent="1" source="open" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#0F766E;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;entryX=1;entryY=0.65;" target="inspect" value="«extend»&lt;br&gt;[Open requested]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1420" y="1003" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="extend-teleport-search" edge="1" parent="1" source="teleport" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#0F766E;exitX=0;exitY=0.5;entryX=1;entryY=0.75;" target="search" value="«extend»&lt;br&gt;[Result selected; teleport requested]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="core-note" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#FFFBEB;strokeColor=#D4AC45;align=left;verticalAlign=top;spacing=17;fontSize=14;" value="&lt;b&gt;Filesystem-first&lt;/b&gt;&lt;br&gt;Files stay ordinary OS files.&lt;br&gt;Watcher events + reconciliation scans update&lt;br&gt;the index; new files enter Lost &amp; Found." vertex="1">
+          <mxGeometry height="112" width="510" x="1290" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="RJjY0FyooioA8zNtwITl-2" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="120" width="1770" x="650" y="1400" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-panel" parent="RJjY0FyooioA8zNtwITl-2" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=1;arcSize=10;fillColor=#F1F5F9;strokeColor=#CBD5E1;" value="" vertex="1">
+          <mxGeometry height="120" width="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" parent="RJjY0FyooioA8zNtwITl-2" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=12;fontColor=#61738B;fontStyle=1;" value="LEGEND — UML USE CASE NOTATION" vertex="1">
+          <mxGeometry height="23" width="1750" x="20" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-content" parent="RJjY0FyooioA8zNtwITl-2" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=14;fontColor=#61738B;fontStyle=0;" value="&lt;b&gt;Stick figure&lt;/b&gt;  Actor &amp;nbsp; · &amp;nbsp; &lt;b&gt;Ellipse&lt;/b&gt;  Use case &amp;nbsp; · &amp;nbsp; &lt;b&gt;Rectangle&lt;/b&gt;  System boundary &amp;nbsp; · &amp;nbsp; &lt;b&gt;Solid line&lt;/b&gt;  Actor association&lt;br&gt;&lt;b&gt;«include»&lt;/b&gt;  Dashed open arrow: main → required supporting behaviour &amp;nbsp; · &amp;nbsp; &lt;b&gt;«extend»&lt;/b&gt;  Dashed open arrow: optional behaviour → base use case" vertex="1">
+          <mxGeometry height="48" width="1750" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-foot" parent="RJjY0FyooioA8zNtwITl-2" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=12;fontColor=#61738B;fontStyle=0;" value="Blue: setup · Purple: core interaction · Teal: conditional extension · Grey: supporting behaviour. Colours have no UML semantics. Native desktop MVP." vertex="1">
+          <mxGeometry height="20" width="1750" x="20" y="91" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="native-broader" name="02 — Management &amp; Customisation">
+    <mxGraphModel dx="1950" dy="1570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1950" pageHeight="1570" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kicker" value="FILEQUEST / OOAD / NATIVE DESKTOP v1.0" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=12;fontColor=#61738B;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="25" width="1700" height="25" />
+        </mxCell>
+        <mxCell id="title" value="Use Case Diagram — Management &amp; Customisation" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=34;fontColor=#182B49;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="65" width="1800" height="55" />
+        </mxCell>
+        <mxCell id="subtitle" value="Broader planned capabilities from the v1.0 concept; these are outside or beyond the minimum MVP." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=16;fontColor=#61738B;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="126" width="1800" height="30" />
+        </mxCell>
+        <mxCell id="boundary" value="&lt;b&gt;fileQuest — Native Desktop Application&lt;/b&gt;" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#F8FAFC;strokeColor=#94A3B8;strokeWidth=2;align=left;verticalAlign=top;spacingTop=22;spacingLeft=28;fontSize=23;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="350" y="190" width="1530" height="1180" />
+        </mxCell>
+        <mxCell id="user" value="User" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2.5;fontSize=21;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="130" y="620" width="80" height="130" />
+        </mxCell>
+        <mxCell id="user-note" value="Local desktop user" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=15;fontColor=#61738B;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="75" y="795" width="230" height="40" />
+        </mxCell>
+        <mxCell id="import" value="Import a custom 3D environment" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="470" y="280" width="570" height="78" />
+        </mxCell>
+        <mxCell id="user-import" value="" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;endArrow=none;strokeColor=#94A3B8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="user" target="import">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="files" value="Move / copy / delete selected files" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="470" y="415" width="570" height="78" />
+        </mxCell>
+        <mxCell id="user-files" value="" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;endArrow=none;strokeColor=#94A3B8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="user" target="files">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="tags" value="Manage file tags and aliases" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="470" y="550" width="570" height="78" />
+        </mxCell>
+        <mxCell id="user-tags" value="" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;endArrow=none;strokeColor=#94A3B8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="user" target="tags">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="bookmarks" value="Manage teleport bookmarks" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="470" y="685" width="570" height="78" />
+        </mxCell>
+        <mxCell id="user-bookmarks" value="" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;endArrow=none;strokeColor=#94A3B8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="user" target="bookmarks">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="backup" value="Back up / export spatial metadata" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="470" y="820" width="570" height="78" />
+        </mxCell>
+        <mxCell id="user-backup" value="" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;endArrow=none;strokeColor=#94A3B8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="user" target="backup">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="undo" value="Undo a spatial change" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="470" y="955" width="570" height="78" />
+        </mxCell>
+        <mxCell id="user-undo" value="" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;endArrow=none;strokeColor=#94A3B8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="user" target="undo">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="relink" value="Relink a missing or ambiguous file" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="470" y="1090" width="570" height="78" />
+        </mxCell>
+        <mxCell id="user-relink" value="" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;endArrow=none;strokeColor=#94A3B8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="user" target="relink">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="views" value="Switch between 3D and list / grid views" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="470" y="1225" width="570" height="78" />
+        </mxCell>
+        <mxCell id="user-views" value="" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;endArrow=none;strokeColor=#94A3B8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="user" target="views">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="validate-model" value="Validate and import 3D model" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1280" y="280" width="490" height="78" />
+        </mxCell>
+        <mxCell id="os-operation" value="Request native filesystem operation" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1280" y="415" width="490" height="78" />
+        </mxCell>
+        <mxCell id="snapshot" value="Create a consistent metadata snapshot" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1280" y="820" width="490" height="78" />
+        </mxCell>
+        <mxCell id="restore" value="Restore previous spatial state" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1280" y="955" width="490" height="78" />
+        </mxCell>
+        <mxCell id="mapping" value="Save corrected file mapping" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;ellipse;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1.7;fontSize=18;align=center;spacing=11;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1280" y="1090" width="490" height="78" />
+        </mxCell>
+        <mxCell id="include-import-validate-model" value="«include»" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="import" target="validate-model">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="include-files-os-operation" value="«include»" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="files" target="os-operation">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="include-backup-snapshot" value="«include»" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="backup" target="snapshot">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="include-undo-restore" value="«include»" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="undo" target="restore">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="include-relink-mapping" value="«include»" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeWidth=1.7;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;strokeColor=#64748B;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="relink" target="mapping">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="management-note" value="&lt;b&gt;File operations and recovery&lt;/b&gt;&lt;br&gt;&lt;br&gt;Confirm destructive bulk operations.&lt;br&gt;Prefer OS trash / recycle-bin behaviour.&lt;br&gt;&lt;br&gt;Spatial undo changes placements;&lt;br&gt;it does not promise recovery of every&lt;br&gt;external filesystem operation." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#FFFBEB;strokeColor=#D4AC45;align=left;verticalAlign=top;spacing=17;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1280" y="550" width="490" height="220" />
+        </mxCell>
+        <mxCell id="legend-panel" value="" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=1;arcSize=10;fillColor=#F1F5F9;strokeColor=#CBD5E1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="1410" width="1820" height="120" />
+        </mxCell>
+        <mxCell id="legend-title" value="LEGEND — UML USE CASE NOTATION" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=12;fontColor=#61738B;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="80" y="1420" width="1750" height="23" />
+        </mxCell>
+        <mxCell id="legend-content" value="&lt;b&gt;Stick figure&lt;/b&gt;  Actor &amp;nbsp; · &amp;nbsp; &lt;b&gt;Ellipse&lt;/b&gt;  Use case &amp;nbsp; · &amp;nbsp; &lt;b&gt;Rectangle&lt;/b&gt;  System boundary &amp;nbsp; · &amp;nbsp; &lt;b&gt;Solid line&lt;/b&gt;  Actor association&lt;br&gt;&lt;b&gt;«include»&lt;/b&gt;  Dashed open arrow: main → required supporting behaviour &amp;nbsp; · &amp;nbsp; &lt;b&gt;«extend»&lt;/b&gt;  Dashed open arrow: optional behaviour → base use case" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=14;fontColor=#61738B;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="80" y="1450" width="1750" height="48" />
+        </mxCell>
+        <mxCell id="legend-foot" value="Planned scope, not implementation status. No accounts, cloud sync, collaboration, semantic AI search or VR are assumed in these diagrams." style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=12;fontColor=#61738B;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="80" y="1501" width="1750" height="20" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

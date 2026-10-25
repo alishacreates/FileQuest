@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="filequest-components" name="Component Diagram — Native Desktop">
+    <mxGraphModel dx="3014" dy="1644" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2320" pageHeight="1660" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=36;fontColor=#182B49;fontStyle=1;" value="FileQuest - Component Diagram" vertex="1">
+          <mxGeometry height="55" width="590" x="855" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="presentation" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=1.8;align=center;spacing=15;fontSize=17;" value="«component»&lt;br&gt;&lt;b&gt;Godot Presentation&lt;/b&gt;&lt;br&gt;&lt;br&gt;Scenes · Camera · Spatial objects&lt;br&gt;UI · Command palette · List / grid views" vertex="1">
+          <mxGeometry height="135" width="1000" x="660" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="application" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1.8;align=center;spacing=15;fontSize=17;" value="«component»&lt;br&gt;&lt;b&gt;Application Services&lt;/b&gt;&lt;br&gt;&lt;br&gt;File operations · Search · Spatial placement · Previews&lt;br&gt;Reconciliation · Lost &amp; Found · Workflow coordination" vertex="1">
+          <mxGeometry height="190" width="1000" x="660" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="presentation-use" edge="1" parent="1" source="presentation" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.8;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="application" value="«use» Commands / queries / results">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="metadata-contract" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1.6;align=center;fontSize=16;spacing=12;" value="«interface»&lt;br&gt;&lt;b&gt;IMetadataRepository&lt;/b&gt;&lt;br&gt;File index and spatial metadata" vertex="1">
+          <mxGeometry height="112" width="490" x="60" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="uses-metadata-contract" edge="1" parent="1" source="application" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.8;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=10;exitX=0.1;exitY=1;entryX=0.5;entryY=0;" target="metadata-contract" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="filesystem-contract" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1.6;align=center;fontSize=16;spacing=12;" value="«interface»&lt;br&gt;&lt;b&gt;IFileSystemAccess&lt;/b&gt;&lt;br&gt;Scan, read, modify and monitor files" vertex="1">
+          <mxGeometry height="112" width="490" x="630" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="uses-filesystem-contract" edge="1" parent="1" source="application" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.8;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=10;exitX=0.36;exitY=1;entryX=0.5;entryY=0;" target="filesystem-contract" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="platform-contract" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1.6;align=center;fontSize=16;spacing=12;" value="«interface»&lt;br&gt;&lt;b&gt;IPlatformServices&lt;/b&gt;&lt;br&gt;Identity, file launching and trash" vertex="1">
+          <mxGeometry height="112" width="490" x="1200" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="uses-platform-contract" edge="1" parent="1" source="application" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.8;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=10;exitX=0.65;exitY=1;entryX=0.5;entryY=0;" target="platform-contract" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="import-contract" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1.6;align=center;fontSize=16;spacing=12;" value="«interface»&lt;br&gt;&lt;b&gt;IEnvironmentImport&lt;/b&gt;&lt;br&gt;Validate and import 3D environments" vertex="1">
+          <mxGeometry height="112" width="490" x="1770" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="uses-import-contract" edge="1" parent="1" source="application" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.8;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=10;exitX=0.92;exitY=1;entryX=0.5;entryY=0;" target="import-contract" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="repository" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1.8;align=center;spacing=15;fontSize=17;" value="«component»&lt;br&gt;&lt;b&gt;SQLite Repository&lt;/b&gt;&lt;br&gt;&lt;br&gt;Microsoft.Data.Sqlite&lt;br&gt;Transactions · Migrations · Snapshots" vertex="1">
+          <mxGeometry height="175" width="490" x="60" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="realizes-repository" edge="1" parent="1" source="repository" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.8;dashed=1;dashPattern=6 4;endArrow=block;endFill=0;endSize=16;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="metadata-contract" value="«realize»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="filesystem" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFF7ED;strokeColor=#FB923C;strokeWidth=1.8;align=center;spacing=15;fontSize=17;" value="«component»&lt;br&gt;&lt;b&gt;Filesystem Integration&lt;/b&gt;&lt;br&gt;&lt;br&gt;System.IO + FileSystemWatcher&lt;br&gt;Scans · Events · File access" vertex="1">
+          <mxGeometry height="175" width="490" x="630" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="realizes-filesystem" edge="1" parent="1" source="filesystem" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.8;dashed=1;dashPattern=6 4;endArrow=block;endFill=0;endSize=16;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="filesystem-contract" value="«realize»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="platform" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFF7ED;strokeColor=#FB923C;strokeWidth=1.8;align=center;spacing=15;fontSize=17;" value="«component»&lt;br&gt;&lt;b&gt;Platform Integration&lt;/b&gt;&lt;br&gt;&lt;br&gt;IFileIdentityProvider · IFileLauncher&lt;br&gt;ITrashService · OS-specific adapters" vertex="1">
+          <mxGeometry height="175" width="490" x="1200" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="realizes-platform" edge="1" parent="1" source="platform" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.8;dashed=1;dashPattern=6 4;endArrow=block;endFill=0;endSize=16;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="platform-contract" value="«realize»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="importer" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=1.8;align=center;spacing=15;fontSize=17;" value="«component»&lt;br&gt;&lt;b&gt;Asset Import&lt;/b&gt;&lt;br&gt;&lt;br&gt;Godot glTF / GLB pipeline&lt;br&gt;Environment and prop loading" vertex="1">
+          <mxGeometry height="175" width="490" x="1770" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="realizes-importer" edge="1" parent="1" source="importer" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.8;dashed=1;dashPattern=6 4;endArrow=block;endFill=0;endSize=16;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="import-contract" value="«realize»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sqlite" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;align=center;fontSize=15;spacing=10;" value="«local library / data»&lt;br&gt;&lt;b&gt;Embedded SQLite + Metadata File&lt;/b&gt;&lt;br&gt;Spatial metadata, not file contents" vertex="1">
+          <mxGeometry height="105" width="490" x="60" y="1320" as="geometry" />
+        </mxCell>
+        <mxCell id="local-use-sqlite" edge="1" parent="1" source="repository" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.8;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="sqlite" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vault" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;align=center;fontSize=15;spacing=10;" value="«local OS resource»&lt;br&gt;&lt;b&gt;Ordinary Vault Files / Folders&lt;/b&gt;&lt;br&gt;Filesystem remains the source of truth" vertex="1">
+          <mxGeometry height="105" width="490" x="630" y="1320" as="geometry" />
+        </mxCell>
+        <mxCell id="local-use-vault" edge="1" parent="1" source="filesystem" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.8;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="vault" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="os" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;align=center;fontSize=15;spacing=10;" value="«local platform service»&lt;br&gt;&lt;b&gt;OS APIs / Native Applications&lt;/b&gt;&lt;br&gt;File associations, identity and recycle bin" vertex="1">
+          <mxGeometry height="105" width="490" x="1200" y="1320" as="geometry" />
+        </mxCell>
+        <mxCell id="local-use-os" edge="1" parent="1" source="platform" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.8;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="os" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="godot-import" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=0;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;align=center;fontSize=15;spacing=10;" value="«local engine facility»&lt;br&gt;&lt;b&gt;Godot Asset Import Facilities&lt;/b&gt;&lt;br&gt;Built-in and user-supplied 3D assets" vertex="1">
+          <mxGeometry height="105" width="490" x="1770" y="1320" as="geometry" />
+        </mxCell>
+        <mxCell id="local-use-godot-import" edge="1" parent="1" source="importer" style="html=1;fontFamily=Helvetica;fontSize=14;fontColor=#334155;labelBackgroundColor=#FFFFFF;strokeColor=#64748B;strokeWidth=1.8;dashed=1;dashPattern=6 4;endArrow=open;endFill=0;endSize=10;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="godot-import" value="«use»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="note" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#FFFBEB;strokeColor=#D4AC45;align=left;verticalAlign=top;spacing=18;fontSize=15;" value="&lt;b&gt;Monitoring contract&lt;/b&gt;&lt;br&gt;Filesystem events are hints.&lt;br&gt;Application reconciliation combines&lt;br&gt;them with periodic scans." vertex="1">
+          <mxGeometry height="190" width="450" x="60" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="note2" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;shape=note;size=16;fillColor=#FFFBEB;strokeColor=#D4AC45;align=left;verticalAlign=top;spacing=18;fontSize=15;" value="&lt;b&gt;Local-first&lt;/b&gt;&lt;br&gt;All modules run on the user’s computer.&lt;br&gt;No browser backend, login service,&lt;br&gt;cloud storage or remote DB is required." vertex="1">
+          <mxGeometry height="190" width="450" x="1810" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-panel" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;rounded=1;arcSize=10;fillColor=#F1F5F9;strokeColor=#CBD5E1;" value="" vertex="1">
+          <mxGeometry height="145" width="2200" x="60" y="1480" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=13;fontColor=#334155;fontStyle=1;" value="LEGEND — UML COMPONENT NOTATION" vertex="1">
+          <mxGeometry height="25" width="2140" x="80" y="1490" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-main" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=14;fontColor=#61738B;fontStyle=0;" value="&lt;b&gt;«component» rectangle&lt;/b&gt;  Logical software module &amp;nbsp; · &amp;nbsp; &lt;b&gt;«interface» rectangle&lt;/b&gt;  Contract consumed or implemented by a component&lt;br&gt;&lt;b&gt;«use» — dashed open arrow&lt;/b&gt;  Consumer → required contract or dependency&lt;br&gt;&lt;b&gt;«realize» — dashed hollow triangle&lt;/b&gt;  Implementing component → provided interface" vertex="1">
+          <mxGeometry height="67" width="2140" x="80" y="1525" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-foot" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Helvetica;fontColor=#182B49;text;align=left;verticalAlign=middle;fontSize=12;fontColor=#61738B;fontStyle=0;" value="Arrowheads indicate dependency / realization, not runtime execution order. Colours group responsibilities only. IPlatformServices groups the three platform-adapter contracts." vertex="1">
+          <mxGeometry height="22" width="2140" x="80" y="1594" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
