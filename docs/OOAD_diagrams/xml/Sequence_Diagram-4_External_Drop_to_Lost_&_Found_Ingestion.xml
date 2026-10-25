@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="4. External Drop to Lost &amp; Found Ingestion" id="UTOyMWWBHC2dqk9o7VP1">
+    <mxGraphModel dx="1306" dy="790" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tLsGwDItdSYTlqs99TZl-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#4c1130;fontFamily=Helvetica;fontSize=12;" value="&lt;b&gt;:OperatingSystem&lt;/b&gt;&lt;br&gt;&amp;laquo;External Host&amp;raquo;" vertex="1">
+          <mxGeometry height="640" width="100" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1b365d;fontFamily=Helvetica;fontSize=12;" value="&lt;b&gt;:FileSystemWatcher&lt;/b&gt;&lt;br&gt;&amp;laquo;Boundary&amp;raquo;" vertex="1">
+          <mxGeometry height="640" width="130" x="210" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e13;fontFamily=Helvetica;fontSize=12;" value="&lt;b&gt;:ReconciliationService&lt;/b&gt;&lt;br&gt;&amp;laquo;Control&amp;raquo;" vertex="1">
+          <mxGeometry height="640" width="150" x="410" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#783f04;fontFamily=Helvetica;fontSize=12;" value="&lt;b&gt;:SQLiteRepository&lt;/b&gt;&lt;br&gt;&amp;laquo;Entity / DB&amp;raquo;" vertex="1">
+          <mxGeometry height="640" width="150" x="630" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e13;fontFamily=Helvetica;fontSize=12;" value="&lt;b&gt;:EventBroker&lt;/b&gt;&lt;br&gt;&amp;laquo;Control / Pub-Sub&amp;raquo;" vertex="1">
+          <mxGeometry height="640" width="150" x="845" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1b365d;fontFamily=Helvetica;fontSize=12;" value="&lt;b&gt;:LostAndFoundTrayUI&lt;/b&gt;&lt;br&gt;&amp;laquo;Boundary / UI&amp;raquo;" vertex="1">
+          <mxGeometry height="640" width="150" x="1055" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-7" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;fillColor=#f8cecc;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="85" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-8" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="520" width="10" x="270" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-9" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="420" width="10" x="480" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-10" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;fillColor=#ffe6cc;strokeColor=#d79b00;" value="" vertex="1">
+          <mxGeometry height="340" width="10" x="700" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-11" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="60" width="10" x="915" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-12" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="120" width="10" x="1125" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-13" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=0;endSize=8;curved=0;rounded=0;strokeColor=#b85450;fontFamily=Helvetica;fontSize=11;strokeWidth=1.5;" value="1: OnCreated(fileCreatedEventArgs) &amp;laquo;event&amp;raquo;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="130" as="sourcePoint" />
+            <mxPoint x="270" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-14" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#1b365d;fontFamily=Helvetica;fontSize=11;strokeWidth=1.5;" value="2: debounceSignal(windowMs=250)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="150" />
+              <mxPoint x="320" y="175" />
+            </Array>
+            <mxPoint x="280" y="150" as="sourcePoint" />
+            <mxPoint x="280" y="175" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-15" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#274e13;fontFamily=Helvetica;fontSize=11;strokeWidth=1.5;" value="3: reconcileDiscoveredFile(filePath)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="200" as="sourcePoint" />
+            <mxPoint x="480" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-16" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#783f04;fontFamily=Helvetica;fontSize=11;strokeWidth=1.5;" value="4: queryRecordByPath(filePath)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="230" as="sourcePoint" />
+            <mxPoint x="700" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-17" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=0;collapsible=0;width=250;height=28;fillColor=#fafafa;strokeColor=#7f8c8d;strokeWidth=1.5;dashed=1;fontFamily=Helvetica;fontSize=11;fontStyle=1;align=left;spacingLeft=6;" value="alt&#xa;[Record Absent in DB (New External Drop)]" vertex="1">
+          <mxGeometry height="340" width="820" x="400" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-18" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=#666666;fontFamily=Helvetica;fontSize=11;strokeWidth=1.2;" value="5: recordExists: false">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="285" as="sourcePoint" />
+            <mxPoint x="490" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-19" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#783f04;fontFamily=Helvetica;fontSize=11;strokeWidth=1.5;" value="6: insertRecord(filePath, is_placed=false)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="315" as="sourcePoint" />
+            <mxPoint x="700" y="315" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-20" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=#666666;fontFamily=Helvetica;fontSize=11;strokeWidth=1.2;" value="7: newEntityId: 1042">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="345" as="sourcePoint" />
+            <mxPoint x="490" y="345" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-21" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=0;endSize=8;curved=0;rounded=0;strokeColor=#274e13;fontFamily=Helvetica;fontSize=11;strokeWidth=1.5;" value="8: publish(ItemIngestedEvent) &amp;laquo;async&amp;raquo;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="380" as="sourcePoint" />
+            <mxPoint x="915" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-22" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=0;endSize=8;curved=0;rounded=0;strokeColor=#274e13;fontFamily=Helvetica;fontSize=11;strokeWidth=1.5;" value="9: dispatchOnItemIngested(1042, filePath)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="925" y="415" as="sourcePoint" />
+            <mxPoint x="1125" y="415" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-23" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#1b365d;fontFamily=Helvetica;fontSize=11;strokeWidth=1.5;" value="10: incrementUnplacedBadge()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1175" y="445" />
+              <mxPoint x="1175" y="470" />
+            </Array>
+            <mxPoint x="1135" y="445" as="sourcePoint" />
+            <mxPoint x="1135" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-24" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#1b365d;fontFamily=Helvetica;fontSize=11;strokeWidth=1.5;" value="11: renderAlertBadgePulse()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1175" y="490" />
+              <mxPoint x="1175" y="515" />
+            </Array>
+            <mxPoint x="1135" y="490" as="sourcePoint" />
+            <mxPoint x="1135" y="515" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-25" parent="1" style="line;strokeWidth=1;dashed=1;labelPosition=top;verticalLabelPosition=bottom;align=left;verticalAlign=top;spacingLeft=10;fontFamily=Helvetica;fontSize=10;fontColor=#7f8c8d;strokeColor=#7f8c8d;" value="[else: Record Already Tracked in DB]" vertex="1">
+          <mxGeometry height="10" width="820" x="400" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-26" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=#666666;fontFamily=Helvetica;fontSize=11;strokeWidth=1.2;" value="12: recordExists: true">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="560" as="sourcePoint" />
+            <mxPoint x="490" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-27" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#274e13;fontFamily=Helvetica;fontSize=11;strokeWidth=1.5;" value="13: logDuplicateIgnored(filePath)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="575" />
+              <mxPoint x="530" y="595" />
+            </Array>
+            <mxPoint x="490" y="575" as="sourcePoint" />
+            <mxPoint x="490" y="595" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tLsGwDItdSYTlqs99TZl-28" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;strokeColor=#274e13;fontFamily=Helvetica;fontSize=11;strokeWidth=1.2;" value="14: ingestionStatus(status)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="620" as="sourcePoint" />
+            <mxPoint x="280" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
